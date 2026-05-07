@@ -1,0 +1,82 @@
+
+`timescale 1ns/1ps
+
+module tb_aes_encryption_core();
+
+    // 1. Khai báo tín hi?u Testbench
+    reg          clk;
+    reg          reset_n;
+    reg          start_n;
+    reg  [127:0] plaintext;
+    reg  [127:0] key;
+    wire [127:0] ciphertext;
+    wire         done;
+
+    // 2. Kh?i t?o (Instantiate) Module mã hóa AES
+    aes_encryption_core dut (
+        .clk(clk),
+        .reset_n(reset_n),
+        .start_n(start_n),
+        .plaintext(plaintext),
+        .key(key),
+        .ciphertext(ciphertext),
+        .done(done)
+    );
+
+    // 3. T?o xung Clock (Chu k? 20ns -> T?n s? 50MHz gi?ng kit DE2)
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk; 
+    end
+
+    // 4. K?ch b?n test (Stimulus)
+    initial begin
+        // In tiêu ?? console
+        $display("=================================================");
+        $display("          TESTBENCH AES-128 ENCRYPTION CORE      ");
+        $display("=================================================");
+
+        // Kh?i t?o giá tr? ban ??u
+        reset_n   = 0;
+        start_n   = 1; // Kéo lên 1 (không ho?t ??ng)
+        plaintext = 128'd0;
+        key       = 128'd0;
+
+        // Gi? reset trong 30ns r?i th? ra
+        #30;
+        reset_n = 1;
+        #20;
+
+        // --- B?T ??U MÃ HÓA ---
+        // N?p vector chu?n c?a NIST
+        plaintext = 128'h3243f6a8885a308d313198a2e0370734;
+        key       = 128'h2b7e151628aed2a6abf7158809cf4f3c;
+        
+        // Kích ho?t tín hi?u start_n (kéo xu?ng 0 trong 1 chu k? clock)
+        start_n = 0;
+        #20; 
+        start_n = 1; // Nh? start_n lên l?i
+
+        $display("Dang ma hoa...");
+        $display("Plaintext : %h", plaintext);
+        $display("Key       : %h", key);
+
+        // Ch? tín hi?u done b?t lên (Dùng @posedge ?? b?t chính xác s??n lên)
+        @(posedge done);
+
+        // --- KI?M TRA K?T QU? ---
+        $display("\nHoan thanh sau 11 chu ky clock!");
+        $display("Ciphertext thuc te : %h", ciphertext);
+        $display("Ciphertext NIST    : 3925841d02dc09fbdc118597196a0b32");
+
+        if (ciphertext == 128'h3925841d02dc09fbdc118597196a0b32) begin
+            $display("\n=> KET QUA: PASSED! Mach chay dung chuan 100%.");
+        end else begin
+            $display("\n=> KET QUA: FAILED! Ban can kiem tra lai cac module to hop.");
+        end
+
+        $display("=================================================");
+        $stop; // D?ng mô ph?ng
+    end
+
+endmodule

@@ -1,0 +1,1897 @@
+TimeQuest Timing Analyzer report for AES_128
+Tue Mar 31 12:14:32 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk_25mhz'
+ 12. Slow Model Setup: 'CLOCK_50'
+ 13. Slow Model Hold: 'CLOCK_50'
+ 14. Slow Model Hold: 'clk_25mhz'
+ 15. Slow Model Minimum Pulse Width: 'CLOCK_50'
+ 16. Slow Model Minimum Pulse Width: 'clk_25mhz'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clk_25mhz'
+ 27. Fast Model Setup: 'CLOCK_50'
+ 28. Fast Model Hold: 'CLOCK_50'
+ 29. Fast Model Hold: 'clk_25mhz'
+ 30. Fast Model Minimum Pulse Width: 'CLOCK_50'
+ 31. Fast Model Minimum Pulse Width: 'clk_25mhz'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; AES_128                                                           ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 16     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets       ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+; clk_25mhz  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk_25mhz } ;
+; CLOCK_50   ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50 }  ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------+
+
+
++--------------------------------------------------+
+; Slow Model Fmax Summary                          ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 362.45 MHz ; 362.45 MHz      ; clk_25mhz  ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_25mhz ; -1.759 ; -25.046       ;
+; CLOCK_50  ; 2.803  ; 0.000         ;
++-----------+--------+---------------+
+
+
++------------------------------------+
+; Slow Model Hold Summary            ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; CLOCK_50  ; -2.533 ; -2.533        ;
+; clk_25mhz ; 0.810  ; 0.000         ;
++-----------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-----------+--------+-------------------+
+; Clock     ; Slack  ; End Point TNS     ;
++-----------+--------+-------------------+
+; CLOCK_50  ; -1.380 ; -18.380           ;
+; clk_25mhz ; -0.500 ; -20.000           ;
++-----------+--------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk_25mhz'                                                                                                                    ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.759 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.795      ;
+; -1.726 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.762      ;
+; -1.614 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.650      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.611 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.646      ;
+; -1.550 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.586      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.533 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.568      ;
+; -1.528 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.564      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.460 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.495      ;
+; -1.459 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.495      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.455 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.490      ;
+; -1.433 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.469      ;
+; -1.420 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.456      ;
+; -1.414 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.450      ;
+; -1.413 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.449      ;
+; -1.410 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.446      ;
+; -1.410 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.446      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.404 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.439      ;
+; -1.364 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.400      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.324 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.359      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.323 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.358      ;
+; -1.319 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.355      ;
+; -1.295 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.331      ;
+; -1.278 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.314      ;
+; -1.277 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.313      ;
+; -1.274 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.310      ;
+; -1.274 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.310      ;
+; -1.250 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.286      ;
+; -1.226 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.262      ;
+; -1.214 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.250      ;
+; -1.185 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 2.221      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
+; -1.181 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 2.216      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'CLOCK_50'                                                                        ;
++-------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; 2.803 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; 0.500        ; 2.674      ; 0.657      ;
+; 3.303 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; 1.000        ; 2.674      ; 0.657      ;
++-------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'CLOCK_50'                                                                          ;
++--------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; -2.533 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; 0.000        ; 2.674      ; 0.657      ;
+; -2.033 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; -0.500       ; 2.674      ; 0.657      ;
++--------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk_25mhz'                                                                                                                    ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.810 ; vga_controller:u_vga|v_count[7] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.076      ;
+; 0.812 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.078      ;
+; 0.815 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.081      ;
+; 0.817 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.083      ;
+; 0.829 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.095      ;
+; 0.842 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.108      ;
+; 0.842 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.108      ;
+; 0.844 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.110      ;
+; 0.849 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.115      ;
+; 0.851 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.117      ;
+; 0.852 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.118      ;
+; 0.853 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.119      ;
+; 0.854 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.120      ;
+; 1.106 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.372      ;
+; 1.106 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.372      ;
+; 1.107 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.373      ;
+; 1.192 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.458      ;
+; 1.193 ; vga_controller:u_vga|v_count[7] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.459      ;
+; 1.197 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.463      ;
+; 1.198 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.464      ;
+; 1.200 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.466      ;
+; 1.214 ; vga_controller:u_vga|v_count[9] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.480      ;
+; 1.217 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.483      ;
+; 1.224 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.490      ;
+; 1.228 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.494      ;
+; 1.230 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.496      ;
+; 1.234 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.500      ;
+; 1.237 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.503      ;
+; 1.239 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.505      ;
+; 1.240 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.506      ;
+; 1.243 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.509      ;
+; 1.243 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.509      ;
+; 1.244 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.510      ;
+; 1.245 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.511      ;
+; 1.247 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.513      ;
+; 1.257 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.523      ;
+; 1.257 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.523      ;
+; 1.260 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.526      ;
+; 1.261 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.527      ;
+; 1.263 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.529      ;
+; 1.271 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.537      ;
+; 1.289 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.555      ;
+; 1.299 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.565      ;
+; 1.301 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.567      ;
+; 1.304 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.570      ;
+; 1.308 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.574      ;
+; 1.309 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.575      ;
+; 1.316 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.582      ;
+; 1.317 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.583      ;
+; 1.340 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.606      ;
+; 1.342 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.608      ;
+; 1.348 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.614      ;
+; 1.349 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.615      ;
+; 1.353 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.619      ;
+; 1.360 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.626      ;
+; 1.372 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.638      ;
+; 1.375 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.641      ;
+; 1.376 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.642      ;
+; 1.376 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.642      ;
+; 1.379 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.645      ;
+; 1.380 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.646      ;
+; 1.380 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.646      ;
+; 1.390 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.656      ;
+; 1.390 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.656      ;
+; 1.394 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.660      ;
+; 1.394 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.660      ;
+; 1.395 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.661      ;
+; 1.399 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.665      ;
+; 1.411 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.677      ;
+; 1.424 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.690      ;
+; 1.431 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.697      ;
+; 1.443 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.709      ;
+; 1.446 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.712      ;
+; 1.450 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.716      ;
+; 1.465 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.731      ;
+; 1.468 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.734      ;
+; 1.470 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.736      ;
+; 1.470 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.736      ;
+; 1.470 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.736      ;
+; 1.493 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.759      ;
+; 1.494 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.760      ;
+; 1.494 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.760      ;
+; 1.495 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.761      ;
+; 1.498 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.764      ;
+; 1.502 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.768      ;
+; 1.519 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.785      ;
+; 1.521 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.787      ;
+; 1.521 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.787      ;
+; 1.521 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.787      ;
+; 1.536 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.802      ;
+; 1.541 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.807      ;
+; 1.566 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.832      ;
+; 1.569 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.835      ;
+; 1.573 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.839      ;
+; 1.585 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.851      ;
+; 1.588 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.854      ;
+; 1.588 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.854      ;
+; 1.589 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.855      ;
+; 1.607 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.873      ;
+; 1.637 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 1.903      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'CLOCK_50'                                                                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clk_25mhz                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clk_25mhz                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clk_25mhz|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clk_25mhz|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[10]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[10]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[11]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[11]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[12]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[12]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[13]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[13]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[14]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[14]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[15]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[15]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[9]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[9]|clk              ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk_25mhz'                                                                          ;
++--------+--------------+----------------+------------------+-----------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-----------+------------+---------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[9] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[9] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; clk_25mhz|regout                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; clk_25mhz|regout                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[9]|clk            ;
++--------+--------------+----------------+------------------+-----------+------------+---------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SRAM_DQ[*]   ; CLOCK_50   ; 4.495 ; 4.495 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[0]  ; CLOCK_50   ; 4.489 ; 4.489 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[1]  ; CLOCK_50   ; 4.359 ; 4.359 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[2]  ; CLOCK_50   ; 4.495 ; 4.495 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[3]  ; CLOCK_50   ; 4.453 ; 4.453 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[4]  ; CLOCK_50   ; 4.062 ; 4.062 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[5]  ; CLOCK_50   ; 4.316 ; 4.316 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[6]  ; CLOCK_50   ; 4.179 ; 4.179 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[7]  ; CLOCK_50   ; 4.244 ; 4.244 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[8]  ; CLOCK_50   ; 4.177 ; 4.177 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[9]  ; CLOCK_50   ; 4.192 ; 4.192 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[10] ; CLOCK_50   ; 3.862 ; 3.862 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[11] ; CLOCK_50   ; 4.130 ; 4.130 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[12] ; CLOCK_50   ; 4.353 ; 4.353 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[13] ; CLOCK_50   ; 4.204 ; 4.204 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[14] ; CLOCK_50   ; 4.202 ; 4.202 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[15] ; CLOCK_50   ; 4.166 ; 4.166 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; SRAM_DQ[*]   ; CLOCK_50   ; -3.632 ; -3.632 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[0]  ; CLOCK_50   ; -4.259 ; -4.259 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[1]  ; CLOCK_50   ; -4.129 ; -4.129 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[2]  ; CLOCK_50   ; -4.265 ; -4.265 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[3]  ; CLOCK_50   ; -4.223 ; -4.223 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[4]  ; CLOCK_50   ; -3.832 ; -3.832 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[5]  ; CLOCK_50   ; -4.086 ; -4.086 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[6]  ; CLOCK_50   ; -3.949 ; -3.949 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[7]  ; CLOCK_50   ; -4.014 ; -4.014 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[8]  ; CLOCK_50   ; -3.947 ; -3.947 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[9]  ; CLOCK_50   ; -3.962 ; -3.962 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[10] ; CLOCK_50   ; -3.632 ; -3.632 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[11] ; CLOCK_50   ; -3.900 ; -3.900 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[12] ; CLOCK_50   ; -4.123 ; -4.123 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[13] ; CLOCK_50   ; -3.974 ; -3.974 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[14] ; CLOCK_50   ; -3.972 ; -3.972 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[15] ; CLOCK_50   ; -3.936 ; -3.936 ; Rise       ; CLOCK_50        ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; VGA_B[*]       ; CLOCK_50   ; 8.744  ; 8.744  ; Rise       ; CLOCK_50        ;
+;  VGA_B[0]      ; CLOCK_50   ; 8.561  ; 8.561  ; Rise       ; CLOCK_50        ;
+;  VGA_B[1]      ; CLOCK_50   ; 8.371  ; 8.371  ; Rise       ; CLOCK_50        ;
+;  VGA_B[2]      ; CLOCK_50   ; 8.744  ; 8.744  ; Rise       ; CLOCK_50        ;
+;  VGA_B[3]      ; CLOCK_50   ; 8.322  ; 8.322  ; Rise       ; CLOCK_50        ;
+;  VGA_B[4]      ; CLOCK_50   ; 8.387  ; 8.387  ; Rise       ; CLOCK_50        ;
+;  VGA_B[5]      ; CLOCK_50   ; 8.351  ; 8.351  ; Rise       ; CLOCK_50        ;
+;  VGA_B[6]      ; CLOCK_50   ; 8.122  ; 8.122  ; Rise       ; CLOCK_50        ;
+;  VGA_B[7]      ; CLOCK_50   ; 8.307  ; 8.307  ; Rise       ; CLOCK_50        ;
+;  VGA_B[8]      ; CLOCK_50   ; 8.346  ; 8.346  ; Rise       ; CLOCK_50        ;
+;  VGA_B[9]      ; CLOCK_50   ; 8.353  ; 8.353  ; Rise       ; CLOCK_50        ;
+; VGA_G[*]       ; CLOCK_50   ; 8.315  ; 8.315  ; Rise       ; CLOCK_50        ;
+;  VGA_G[0]      ; CLOCK_50   ; 8.306  ; 8.306  ; Rise       ; CLOCK_50        ;
+;  VGA_G[1]      ; CLOCK_50   ; 7.846  ; 7.846  ; Rise       ; CLOCK_50        ;
+;  VGA_G[2]      ; CLOCK_50   ; 8.315  ; 8.315  ; Rise       ; CLOCK_50        ;
+;  VGA_G[3]      ; CLOCK_50   ; 8.294  ; 8.294  ; Rise       ; CLOCK_50        ;
+;  VGA_G[4]      ; CLOCK_50   ; 7.882  ; 7.882  ; Rise       ; CLOCK_50        ;
+;  VGA_G[5]      ; CLOCK_50   ; 7.834  ; 7.834  ; Rise       ; CLOCK_50        ;
+;  VGA_G[6]      ; CLOCK_50   ; 8.047  ; 8.047  ; Rise       ; CLOCK_50        ;
+;  VGA_G[7]      ; CLOCK_50   ; 7.365  ; 7.365  ; Rise       ; CLOCK_50        ;
+;  VGA_G[8]      ; CLOCK_50   ; 8.089  ; 8.089  ; Rise       ; CLOCK_50        ;
+;  VGA_G[9]      ; CLOCK_50   ; 8.073  ; 8.073  ; Rise       ; CLOCK_50        ;
+; VGA_R[*]       ; CLOCK_50   ; 8.310  ; 8.310  ; Rise       ; CLOCK_50        ;
+;  VGA_R[0]      ; CLOCK_50   ; 7.858  ; 7.858  ; Rise       ; CLOCK_50        ;
+;  VGA_R[1]      ; CLOCK_50   ; 7.844  ; 7.844  ; Rise       ; CLOCK_50        ;
+;  VGA_R[2]      ; CLOCK_50   ; 7.842  ; 7.842  ; Rise       ; CLOCK_50        ;
+;  VGA_R[3]      ; CLOCK_50   ; 7.888  ; 7.888  ; Rise       ; CLOCK_50        ;
+;  VGA_R[4]      ; CLOCK_50   ; 7.884  ; 7.884  ; Rise       ; CLOCK_50        ;
+;  VGA_R[5]      ; CLOCK_50   ; 7.649  ; 7.649  ; Rise       ; CLOCK_50        ;
+;  VGA_R[6]      ; CLOCK_50   ; 8.310  ; 8.310  ; Rise       ; CLOCK_50        ;
+;  VGA_R[7]      ; CLOCK_50   ; 8.086  ; 8.086  ; Rise       ; CLOCK_50        ;
+;  VGA_R[8]      ; CLOCK_50   ; 8.076  ; 8.076  ; Rise       ; CLOCK_50        ;
+;  VGA_R[9]      ; CLOCK_50   ; 7.823  ; 7.823  ; Rise       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; clk_25mhz  ; 12.727 ; 12.727 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[0]  ; clk_25mhz  ; 10.755 ; 10.755 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[1]  ; clk_25mhz  ; 10.763 ; 10.763 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[2]  ; clk_25mhz  ; 11.032 ; 11.032 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[3]  ; clk_25mhz  ; 11.033 ; 11.033 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[4]  ; clk_25mhz  ; 11.031 ; 11.031 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[5]  ; clk_25mhz  ; 11.022 ; 11.022 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[6]  ; clk_25mhz  ; 11.242 ; 11.242 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[7]  ; clk_25mhz  ; 11.326 ; 11.326 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[8]  ; clk_25mhz  ; 11.367 ; 11.367 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[9]  ; clk_25mhz  ; 11.880 ; 11.880 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[10] ; clk_25mhz  ; 12.057 ; 12.057 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[11] ; clk_25mhz  ; 12.391 ; 12.391 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[12] ; clk_25mhz  ; 12.186 ; 12.186 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[13] ; clk_25mhz  ; 12.504 ; 12.504 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[14] ; clk_25mhz  ; 12.469 ; 12.469 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[15] ; clk_25mhz  ; 12.390 ; 12.390 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[16] ; clk_25mhz  ; 12.637 ; 12.637 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[17] ; clk_25mhz  ; 12.727 ; 12.727 ; Rise       ; clk_25mhz       ;
+; VGA_B[*]       ; clk_25mhz  ; 14.535 ; 14.535 ; Rise       ; clk_25mhz       ;
+;  VGA_B[0]      ; clk_25mhz  ; 14.369 ; 14.369 ; Rise       ; clk_25mhz       ;
+;  VGA_B[1]      ; clk_25mhz  ; 14.184 ; 14.184 ; Rise       ; clk_25mhz       ;
+;  VGA_B[2]      ; clk_25mhz  ; 14.535 ; 14.535 ; Rise       ; clk_25mhz       ;
+;  VGA_B[3]      ; clk_25mhz  ; 14.127 ; 14.127 ; Rise       ; clk_25mhz       ;
+;  VGA_B[4]      ; clk_25mhz  ; 14.188 ; 14.188 ; Rise       ; clk_25mhz       ;
+;  VGA_B[5]      ; clk_25mhz  ; 14.159 ; 14.159 ; Rise       ; clk_25mhz       ;
+;  VGA_B[6]      ; clk_25mhz  ; 13.935 ; 13.935 ; Rise       ; clk_25mhz       ;
+;  VGA_B[7]      ; clk_25mhz  ; 14.098 ; 14.098 ; Rise       ; clk_25mhz       ;
+;  VGA_B[8]      ; clk_25mhz  ; 14.151 ; 14.151 ; Rise       ; clk_25mhz       ;
+;  VGA_B[9]      ; clk_25mhz  ; 14.154 ; 14.154 ; Rise       ; clk_25mhz       ;
+; VGA_BLANK      ; clk_25mhz  ; 10.997 ; 10.997 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ; 6.905  ;        ; Rise       ; clk_25mhz       ;
+; VGA_G[*]       ; clk_25mhz  ; 14.128 ; 14.128 ; Rise       ; clk_25mhz       ;
+;  VGA_G[0]      ; clk_25mhz  ; 14.117 ; 14.117 ; Rise       ; clk_25mhz       ;
+;  VGA_G[1]      ; clk_25mhz  ; 13.657 ; 13.657 ; Rise       ; clk_25mhz       ;
+;  VGA_G[2]      ; clk_25mhz  ; 14.128 ; 14.128 ; Rise       ; clk_25mhz       ;
+;  VGA_G[3]      ; clk_25mhz  ; 14.108 ; 14.108 ; Rise       ; clk_25mhz       ;
+;  VGA_G[4]      ; clk_25mhz  ; 13.687 ; 13.687 ; Rise       ; clk_25mhz       ;
+;  VGA_G[5]      ; clk_25mhz  ; 13.625 ; 13.625 ; Rise       ; clk_25mhz       ;
+;  VGA_G[6]      ; clk_25mhz  ; 13.858 ; 13.858 ; Rise       ; clk_25mhz       ;
+;  VGA_G[7]      ; clk_25mhz  ; 13.176 ; 13.176 ; Rise       ; clk_25mhz       ;
+;  VGA_G[8]      ; clk_25mhz  ; 13.902 ; 13.902 ; Rise       ; clk_25mhz       ;
+;  VGA_G[9]      ; clk_25mhz  ; 13.887 ; 13.887 ; Rise       ; clk_25mhz       ;
+; VGA_HS         ; clk_25mhz  ; 10.153 ; 10.153 ; Rise       ; clk_25mhz       ;
+; VGA_R[*]       ; clk_25mhz  ; 14.124 ; 14.124 ; Rise       ; clk_25mhz       ;
+;  VGA_R[0]      ; clk_25mhz  ; 13.655 ; 13.655 ; Rise       ; clk_25mhz       ;
+;  VGA_R[1]      ; clk_25mhz  ; 13.658 ; 13.658 ; Rise       ; clk_25mhz       ;
+;  VGA_R[2]      ; clk_25mhz  ; 13.656 ; 13.656 ; Rise       ; clk_25mhz       ;
+;  VGA_R[3]      ; clk_25mhz  ; 13.685 ; 13.685 ; Rise       ; clk_25mhz       ;
+;  VGA_R[4]      ; clk_25mhz  ; 13.685 ; 13.685 ; Rise       ; clk_25mhz       ;
+;  VGA_R[5]      ; clk_25mhz  ; 13.446 ; 13.446 ; Rise       ; clk_25mhz       ;
+;  VGA_R[6]      ; clk_25mhz  ; 14.124 ; 14.124 ; Rise       ; clk_25mhz       ;
+;  VGA_R[7]      ; clk_25mhz  ; 13.900 ; 13.900 ; Rise       ; clk_25mhz       ;
+;  VGA_R[8]      ; clk_25mhz  ; 13.873 ; 13.873 ; Rise       ; clk_25mhz       ;
+;  VGA_R[9]      ; clk_25mhz  ; 13.624 ; 13.624 ; Rise       ; clk_25mhz       ;
+; VGA_VS         ; clk_25mhz  ; 10.832 ; 10.832 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ;        ; 6.905  ; Fall       ; clk_25mhz       ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; VGA_B[*]       ; CLOCK_50   ; 8.122  ; 8.122  ; Rise       ; CLOCK_50        ;
+;  VGA_B[0]      ; CLOCK_50   ; 8.561  ; 8.561  ; Rise       ; CLOCK_50        ;
+;  VGA_B[1]      ; CLOCK_50   ; 8.371  ; 8.371  ; Rise       ; CLOCK_50        ;
+;  VGA_B[2]      ; CLOCK_50   ; 8.744  ; 8.744  ; Rise       ; CLOCK_50        ;
+;  VGA_B[3]      ; CLOCK_50   ; 8.322  ; 8.322  ; Rise       ; CLOCK_50        ;
+;  VGA_B[4]      ; CLOCK_50   ; 8.387  ; 8.387  ; Rise       ; CLOCK_50        ;
+;  VGA_B[5]      ; CLOCK_50   ; 8.351  ; 8.351  ; Rise       ; CLOCK_50        ;
+;  VGA_B[6]      ; CLOCK_50   ; 8.122  ; 8.122  ; Rise       ; CLOCK_50        ;
+;  VGA_B[7]      ; CLOCK_50   ; 8.307  ; 8.307  ; Rise       ; CLOCK_50        ;
+;  VGA_B[8]      ; CLOCK_50   ; 8.346  ; 8.346  ; Rise       ; CLOCK_50        ;
+;  VGA_B[9]      ; CLOCK_50   ; 8.353  ; 8.353  ; Rise       ; CLOCK_50        ;
+; VGA_G[*]       ; CLOCK_50   ; 7.365  ; 7.365  ; Rise       ; CLOCK_50        ;
+;  VGA_G[0]      ; CLOCK_50   ; 8.306  ; 8.306  ; Rise       ; CLOCK_50        ;
+;  VGA_G[1]      ; CLOCK_50   ; 7.846  ; 7.846  ; Rise       ; CLOCK_50        ;
+;  VGA_G[2]      ; CLOCK_50   ; 8.315  ; 8.315  ; Rise       ; CLOCK_50        ;
+;  VGA_G[3]      ; CLOCK_50   ; 8.294  ; 8.294  ; Rise       ; CLOCK_50        ;
+;  VGA_G[4]      ; CLOCK_50   ; 7.882  ; 7.882  ; Rise       ; CLOCK_50        ;
+;  VGA_G[5]      ; CLOCK_50   ; 7.834  ; 7.834  ; Rise       ; CLOCK_50        ;
+;  VGA_G[6]      ; CLOCK_50   ; 8.047  ; 8.047  ; Rise       ; CLOCK_50        ;
+;  VGA_G[7]      ; CLOCK_50   ; 7.365  ; 7.365  ; Rise       ; CLOCK_50        ;
+;  VGA_G[8]      ; CLOCK_50   ; 8.089  ; 8.089  ; Rise       ; CLOCK_50        ;
+;  VGA_G[9]      ; CLOCK_50   ; 8.073  ; 8.073  ; Rise       ; CLOCK_50        ;
+; VGA_R[*]       ; CLOCK_50   ; 7.649  ; 7.649  ; Rise       ; CLOCK_50        ;
+;  VGA_R[0]      ; CLOCK_50   ; 7.858  ; 7.858  ; Rise       ; CLOCK_50        ;
+;  VGA_R[1]      ; CLOCK_50   ; 7.844  ; 7.844  ; Rise       ; CLOCK_50        ;
+;  VGA_R[2]      ; CLOCK_50   ; 7.842  ; 7.842  ; Rise       ; CLOCK_50        ;
+;  VGA_R[3]      ; CLOCK_50   ; 7.888  ; 7.888  ; Rise       ; CLOCK_50        ;
+;  VGA_R[4]      ; CLOCK_50   ; 7.884  ; 7.884  ; Rise       ; CLOCK_50        ;
+;  VGA_R[5]      ; CLOCK_50   ; 7.649  ; 7.649  ; Rise       ; CLOCK_50        ;
+;  VGA_R[6]      ; CLOCK_50   ; 8.310  ; 8.310  ; Rise       ; CLOCK_50        ;
+;  VGA_R[7]      ; CLOCK_50   ; 8.086  ; 8.086  ; Rise       ; CLOCK_50        ;
+;  VGA_R[8]      ; CLOCK_50   ; 8.076  ; 8.076  ; Rise       ; CLOCK_50        ;
+;  VGA_R[9]      ; CLOCK_50   ; 7.823  ; 7.823  ; Rise       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; clk_25mhz  ; 7.325  ; 7.325  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[0]  ; clk_25mhz  ; 7.502  ; 7.502  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[1]  ; clk_25mhz  ; 7.460  ; 7.460  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[2]  ; clk_25mhz  ; 7.443  ; 7.443  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[3]  ; clk_25mhz  ; 7.465  ; 7.465  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[4]  ; clk_25mhz  ; 7.337  ; 7.337  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[5]  ; clk_25mhz  ; 7.325  ; 7.325  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[6]  ; clk_25mhz  ; 8.436  ; 8.436  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[7]  ; clk_25mhz  ; 8.474  ; 8.474  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[8]  ; clk_25mhz  ; 8.396  ; 8.396  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[9]  ; clk_25mhz  ; 8.420  ; 8.420  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[10] ; clk_25mhz  ; 8.221  ; 8.221  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[11] ; clk_25mhz  ; 8.442  ; 8.442  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[12] ; clk_25mhz  ; 8.191  ; 8.191  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[13] ; clk_25mhz  ; 8.246  ; 8.246  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[14] ; clk_25mhz  ; 7.938  ; 7.938  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[15] ; clk_25mhz  ; 8.160  ; 8.160  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[16] ; clk_25mhz  ; 7.973  ; 7.973  ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[17] ; clk_25mhz  ; 7.958  ; 7.958  ; Rise       ; clk_25mhz       ;
+; VGA_B[*]       ; clk_25mhz  ; 10.493 ; 10.493 ; Rise       ; clk_25mhz       ;
+;  VGA_B[0]      ; clk_25mhz  ; 10.927 ; 10.927 ; Rise       ; clk_25mhz       ;
+;  VGA_B[1]      ; clk_25mhz  ; 10.742 ; 10.742 ; Rise       ; clk_25mhz       ;
+;  VGA_B[2]      ; clk_25mhz  ; 11.092 ; 11.092 ; Rise       ; clk_25mhz       ;
+;  VGA_B[3]      ; clk_25mhz  ; 10.684 ; 10.684 ; Rise       ; clk_25mhz       ;
+;  VGA_B[4]      ; clk_25mhz  ; 10.745 ; 10.745 ; Rise       ; clk_25mhz       ;
+;  VGA_B[5]      ; clk_25mhz  ; 10.717 ; 10.717 ; Rise       ; clk_25mhz       ;
+;  VGA_B[6]      ; clk_25mhz  ; 10.493 ; 10.493 ; Rise       ; clk_25mhz       ;
+;  VGA_B[7]      ; clk_25mhz  ; 10.655 ; 10.655 ; Rise       ; clk_25mhz       ;
+;  VGA_B[8]      ; clk_25mhz  ; 10.708 ; 10.708 ; Rise       ; clk_25mhz       ;
+;  VGA_B[9]      ; clk_25mhz  ; 10.711 ; 10.711 ; Rise       ; clk_25mhz       ;
+; VGA_BLANK      ; clk_25mhz  ; 9.339  ; 9.339  ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ; 6.905  ;        ; Rise       ; clk_25mhz       ;
+; VGA_G[*]       ; clk_25mhz  ; 9.734  ; 9.734  ; Rise       ; clk_25mhz       ;
+;  VGA_G[0]      ; clk_25mhz  ; 10.675 ; 10.675 ; Rise       ; clk_25mhz       ;
+;  VGA_G[1]      ; clk_25mhz  ; 10.215 ; 10.215 ; Rise       ; clk_25mhz       ;
+;  VGA_G[2]      ; clk_25mhz  ; 10.686 ; 10.686 ; Rise       ; clk_25mhz       ;
+;  VGA_G[3]      ; clk_25mhz  ; 10.667 ; 10.667 ; Rise       ; clk_25mhz       ;
+;  VGA_G[4]      ; clk_25mhz  ; 10.244 ; 10.244 ; Rise       ; clk_25mhz       ;
+;  VGA_G[5]      ; clk_25mhz  ; 10.182 ; 10.182 ; Rise       ; clk_25mhz       ;
+;  VGA_G[6]      ; clk_25mhz  ; 10.416 ; 10.416 ; Rise       ; clk_25mhz       ;
+;  VGA_G[7]      ; clk_25mhz  ; 9.734  ; 9.734  ; Rise       ; clk_25mhz       ;
+;  VGA_G[8]      ; clk_25mhz  ; 10.460 ; 10.460 ; Rise       ; clk_25mhz       ;
+;  VGA_G[9]      ; clk_25mhz  ; 10.446 ; 10.446 ; Rise       ; clk_25mhz       ;
+; VGA_HS         ; clk_25mhz  ; 9.304  ; 9.304  ; Rise       ; clk_25mhz       ;
+; VGA_R[*]       ; clk_25mhz  ; 10.004 ; 10.004 ; Rise       ; clk_25mhz       ;
+;  VGA_R[0]      ; clk_25mhz  ; 10.213 ; 10.213 ; Rise       ; clk_25mhz       ;
+;  VGA_R[1]      ; clk_25mhz  ; 10.216 ; 10.216 ; Rise       ; clk_25mhz       ;
+;  VGA_R[2]      ; clk_25mhz  ; 10.214 ; 10.214 ; Rise       ; clk_25mhz       ;
+;  VGA_R[3]      ; clk_25mhz  ; 10.243 ; 10.243 ; Rise       ; clk_25mhz       ;
+;  VGA_R[4]      ; clk_25mhz  ; 10.242 ; 10.242 ; Rise       ; clk_25mhz       ;
+;  VGA_R[5]      ; clk_25mhz  ; 10.004 ; 10.004 ; Rise       ; clk_25mhz       ;
+;  VGA_R[6]      ; clk_25mhz  ; 10.682 ; 10.682 ; Rise       ; clk_25mhz       ;
+;  VGA_R[7]      ; clk_25mhz  ; 10.458 ; 10.458 ; Rise       ; clk_25mhz       ;
+;  VGA_R[8]      ; clk_25mhz  ; 10.431 ; 10.431 ; Rise       ; clk_25mhz       ;
+;  VGA_R[9]      ; clk_25mhz  ; 10.181 ; 10.181 ; Rise       ; clk_25mhz       ;
+; VGA_VS         ; clk_25mhz  ; 9.497  ; 9.497  ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ;        ; 6.905  ; Fall       ; clk_25mhz       ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------+
+; Fast Model Setup Summary           ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; clk_25mhz ; -0.286 ; -3.135        ;
+; CLOCK_50  ; 1.958  ; 0.000         ;
++-----------+--------+---------------+
+
+
++------------------------------------+
+; Fast Model Hold Summary            ;
++-----------+--------+---------------+
+; Clock     ; Slack  ; End Point TNS ;
++-----------+--------+---------------+
+; CLOCK_50  ; -1.578 ; -1.578        ;
+; clk_25mhz ; 0.363  ; 0.000         ;
++-----------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-----------+--------+-------------------+
+; Clock     ; Slack  ; End Point TNS     ;
++-----------+--------+-------------------+
+; CLOCK_50  ; -1.380 ; -18.380           ;
+; clk_25mhz ; -0.500 ; -20.000           ;
++-----------+--------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk_25mhz'                                                                                                                    ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.286 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.317      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.256 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.287      ;
+; -0.253 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.285      ;
+; -0.232 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.264      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.226 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.257      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.196 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.227      ;
+; -0.181 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.213      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.179 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.210      ;
+; -0.148 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.180      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.147 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.178      ;
+; -0.145 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.177      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.144 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.175      ;
+; -0.114 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.146      ;
+; -0.108 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.140      ;
+; -0.107 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.139      ;
+; -0.103 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.135      ;
+; -0.103 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.135      ;
+; -0.102 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.134      ;
+; -0.068 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.100      ;
+; -0.064 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.096      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.063 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.094      ;
+; -0.026 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.058      ;
+; -0.025 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; 0.000      ; 1.057      ;
+; -0.022 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.053      ;
+; -0.022 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.053      ;
+; -0.022 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.053      ;
+; -0.022 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.053      ;
+; -0.022 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 1.000        ; -0.001     ; 1.053      ;
++--------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'CLOCK_50'                                                                        ;
++-------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; 1.958 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; 0.500        ; 1.652      ; 0.367      ;
+; 2.458 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; 1.000        ; 1.652      ; 0.367      ;
++-------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'CLOCK_50'                                                                          ;
++--------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node ; To Node   ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+; -1.578 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; 0.000        ; 1.652      ; 0.367      ;
+; -1.078 ; clk_25mhz ; clk_25mhz ; clk_25mhz    ; CLOCK_50    ; -0.500       ; 1.652      ; 0.367      ;
++--------+-----------+-----------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk_25mhz'                                                                                                                    ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                       ; To Node                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.363 ; vga_controller:u_vga|v_count[7] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.515      ;
+; 0.364 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.516      ;
+; 0.365 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.517      ;
+; 0.365 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.517      ;
+; 0.374 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; vga_controller:u_vga|v_count[8] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.526      ;
+; 0.374 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.527      ;
+; 0.378 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.532      ;
+; 0.380 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.532      ;
+; 0.488 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.640      ;
+; 0.488 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.640      ;
+; 0.489 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.641      ;
+; 0.501 ; vga_controller:u_vga|v_count[7] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.653      ;
+; 0.501 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.653      ;
+; 0.503 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.655      ;
+; 0.503 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.655      ;
+; 0.504 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.656      ;
+; 0.514 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.666      ;
+; 0.514 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.666      ;
+; 0.518 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.670      ;
+; 0.520 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.672      ;
+; 0.520 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[1] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.672      ;
+; 0.536 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.688      ;
+; 0.537 ; vga_controller:u_vga|v_count[9] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.689      ;
+; 0.537 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.689      ;
+; 0.538 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.690      ;
+; 0.541 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.693      ;
+; 0.546 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.698      ;
+; 0.549 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; vga_controller:u_vga|v_count[6] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.701      ;
+; 0.553 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.705      ;
+; 0.553 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.705      ;
+; 0.554 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.706      ;
+; 0.555 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.707      ;
+; 0.557 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.709      ;
+; 0.559 ; vga_controller:u_vga|h_count[8] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.711      ;
+; 0.560 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.712      ;
+; 0.567 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.719      ;
+; 0.567 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.719      ;
+; 0.568 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.720      ;
+; 0.568 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.720      ;
+; 0.573 ; vga_controller:u_vga|v_count[5] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.725      ;
+; 0.573 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.725      ;
+; 0.584 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.736      ;
+; 0.590 ; vga_controller:u_vga|h_count[4] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.742      ;
+; 0.595 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.747      ;
+; 0.596 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.748      ;
+; 0.597 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.749      ;
+; 0.598 ; vga_controller:u_vga|h_count[5] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.750      ;
+; 0.603 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.755      ;
+; 0.608 ; vga_controller:u_vga|h_count[3] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.760      ;
+; 0.612 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.764      ;
+; 0.613 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.765      ;
+; 0.614 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.766      ;
+; 0.619 ; vga_controller:u_vga|v_count[4] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.771      ;
+; 0.623 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.775      ;
+; 0.627 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.779      ;
+; 0.627 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.779      ;
+; 0.628 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.780      ;
+; 0.630 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.782      ;
+; 0.631 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.783      ;
+; 0.632 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.784      ;
+; 0.632 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[0] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.784      ;
+; 0.636 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.788      ;
+; 0.637 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.789      ;
+; 0.638 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.790      ;
+; 0.640 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.792      ;
+; 0.640 ; vga_controller:u_vga|h_count[9] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.792      ;
+; 0.647 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.799      ;
+; 0.649 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.801      ;
+; 0.658 ; vga_controller:u_vga|h_count[2] ; vga_controller:u_vga|h_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.810      ;
+; 0.665 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.817      ;
+; 0.666 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.818      ;
+; 0.668 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.820      ;
+; 0.672 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.824      ;
+; 0.673 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.825      ;
+; 0.675 ; vga_controller:u_vga|h_count[7] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.827      ;
+; 0.682 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.834      ;
+; 0.684 ; vga_controller:u_vga|h_count[0] ; vga_controller:u_vga|h_count[4] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.836      ;
+; 0.687 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.839      ;
+; 0.689 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.841      ;
+; 0.689 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.841      ;
+; 0.690 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.842      ;
+; 0.692 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.844      ;
+; 0.692 ; vga_controller:u_vga|h_count[6] ; vga_controller:u_vga|h_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.844      ;
+; 0.700 ; vga_controller:u_vga|v_count[3] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.852      ;
+; 0.701 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[7] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.853      ;
+; 0.703 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[5] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.855      ;
+; 0.705 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[3] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.857      ;
+; 0.708 ; vga_controller:u_vga|h_count[1] ; vga_controller:u_vga|h_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.860      ;
+; 0.709 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[2] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.861      ;
+; 0.710 ; vga_controller:u_vga|v_count[0] ; vga_controller:u_vga|v_count[9] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.862      ;
+; 0.717 ; vga_controller:u_vga|v_count[1] ; vga_controller:u_vga|v_count[6] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.869      ;
+; 0.736 ; vga_controller:u_vga|v_count[2] ; vga_controller:u_vga|v_count[8] ; clk_25mhz    ; clk_25mhz   ; 0.000        ; 0.000      ; 0.888      ;
++-------+---------------------------------+---------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'CLOCK_50'                                                                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target                                 ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; CLOCK_50 ; Rise       ; CLOCK_50                               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clk_25mhz                              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clk_25mhz                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; sram_controller:u_sram|o_data_read[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50|combout                       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|inclk[0]              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; CLOCK_50~clkctrl|outclk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; clk_25mhz|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; clk_25mhz|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[10]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[10]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[11]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[11]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[12]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[12]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[13]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[13]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[14]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[14]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[15]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[15]|clk             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[4]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[5]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[6]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[7]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[8]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; CLOCK_50 ; Rise       ; u_sram|o_data_read[9]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; CLOCK_50 ; Rise       ; u_sram|o_data_read[9]|clk              ;
++--------+--------------+----------------+------------------+----------+------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk_25mhz'                                                                          ;
++--------+--------------+----------------+------------------+-----------+------------+---------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock     ; Clock Edge ; Target                          ;
++--------+--------------+----------------+------------------+-----------+------------+---------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|h_count[9] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; vga_controller:u_vga|v_count[9] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; clk_25mhz|regout                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; clk_25mhz|regout                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|inclk[0]      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; clk_25mhz~clkctrl|outclk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|h_count[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|h_count[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[0]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[1]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[2]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[3]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[4]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[5]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[6]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[7]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[8]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk_25mhz ; Rise       ; u_vga|v_count[9]|clk            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk_25mhz ; Rise       ; u_vga|v_count[9]|clk            ;
++--------+--------------+----------------+------------------+-----------+------------+---------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SRAM_DQ[*]   ; CLOCK_50   ; 2.449 ; 2.449 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[0]  ; CLOCK_50   ; 2.447 ; 2.447 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[1]  ; CLOCK_50   ; 2.367 ; 2.367 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[2]  ; CLOCK_50   ; 2.449 ; 2.449 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[3]  ; CLOCK_50   ; 2.415 ; 2.415 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[4]  ; CLOCK_50   ; 2.208 ; 2.208 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[5]  ; CLOCK_50   ; 2.385 ; 2.385 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[6]  ; CLOCK_50   ; 2.278 ; 2.278 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[7]  ; CLOCK_50   ; 2.330 ; 2.330 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[8]  ; CLOCK_50   ; 2.290 ; 2.290 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[9]  ; CLOCK_50   ; 2.288 ; 2.288 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[10] ; CLOCK_50   ; 2.138 ; 2.138 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[11] ; CLOCK_50   ; 2.260 ; 2.260 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[12] ; CLOCK_50   ; 2.383 ; 2.383 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[13] ; CLOCK_50   ; 2.291 ; 2.291 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[14] ; CLOCK_50   ; 2.297 ; 2.297 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[15] ; CLOCK_50   ; 2.285 ; 2.285 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; SRAM_DQ[*]   ; CLOCK_50   ; -2.018 ; -2.018 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[0]  ; CLOCK_50   ; -2.327 ; -2.327 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[1]  ; CLOCK_50   ; -2.247 ; -2.247 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[2]  ; CLOCK_50   ; -2.329 ; -2.329 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[3]  ; CLOCK_50   ; -2.295 ; -2.295 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[4]  ; CLOCK_50   ; -2.088 ; -2.088 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[5]  ; CLOCK_50   ; -2.265 ; -2.265 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[6]  ; CLOCK_50   ; -2.158 ; -2.158 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[7]  ; CLOCK_50   ; -2.210 ; -2.210 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[8]  ; CLOCK_50   ; -2.170 ; -2.170 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[9]  ; CLOCK_50   ; -2.168 ; -2.168 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[10] ; CLOCK_50   ; -2.018 ; -2.018 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[11] ; CLOCK_50   ; -2.140 ; -2.140 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[12] ; CLOCK_50   ; -2.263 ; -2.263 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[13] ; CLOCK_50   ; -2.171 ; -2.171 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[14] ; CLOCK_50   ; -2.177 ; -2.177 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[15] ; CLOCK_50   ; -2.165 ; -2.165 ; Rise       ; CLOCK_50        ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Clock to Output Times                                                      ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; VGA_B[*]       ; CLOCK_50   ; 4.755 ; 4.755 ; Rise       ; CLOCK_50        ;
+;  VGA_B[0]      ; CLOCK_50   ; 4.694 ; 4.694 ; Rise       ; CLOCK_50        ;
+;  VGA_B[1]      ; CLOCK_50   ; 4.640 ; 4.640 ; Rise       ; CLOCK_50        ;
+;  VGA_B[2]      ; CLOCK_50   ; 4.755 ; 4.755 ; Rise       ; CLOCK_50        ;
+;  VGA_B[3]      ; CLOCK_50   ; 4.621 ; 4.621 ; Rise       ; CLOCK_50        ;
+;  VGA_B[4]      ; CLOCK_50   ; 4.644 ; 4.644 ; Rise       ; CLOCK_50        ;
+;  VGA_B[5]      ; CLOCK_50   ; 4.618 ; 4.618 ; Rise       ; CLOCK_50        ;
+;  VGA_B[6]      ; CLOCK_50   ; 4.529 ; 4.529 ; Rise       ; CLOCK_50        ;
+;  VGA_B[7]      ; CLOCK_50   ; 4.582 ; 4.582 ; Rise       ; CLOCK_50        ;
+;  VGA_B[8]      ; CLOCK_50   ; 4.646 ; 4.646 ; Rise       ; CLOCK_50        ;
+;  VGA_B[9]      ; CLOCK_50   ; 4.608 ; 4.608 ; Rise       ; CLOCK_50        ;
+; VGA_G[*]       ; CLOCK_50   ; 4.583 ; 4.583 ; Rise       ; CLOCK_50        ;
+;  VGA_G[0]      ; CLOCK_50   ; 4.580 ; 4.580 ; Rise       ; CLOCK_50        ;
+;  VGA_G[1]      ; CLOCK_50   ; 4.394 ; 4.394 ; Rise       ; CLOCK_50        ;
+;  VGA_G[2]      ; CLOCK_50   ; 4.583 ; 4.583 ; Rise       ; CLOCK_50        ;
+;  VGA_G[3]      ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_G[4]      ; CLOCK_50   ; 4.393 ; 4.393 ; Rise       ; CLOCK_50        ;
+;  VGA_G[5]      ; CLOCK_50   ; 4.368 ; 4.368 ; Rise       ; CLOCK_50        ;
+;  VGA_G[6]      ; CLOCK_50   ; 4.447 ; 4.447 ; Rise       ; CLOCK_50        ;
+;  VGA_G[7]      ; CLOCK_50   ; 4.169 ; 4.169 ; Rise       ; CLOCK_50        ;
+;  VGA_G[8]      ; CLOCK_50   ; 4.486 ; 4.486 ; Rise       ; CLOCK_50        ;
+;  VGA_G[9]      ; CLOCK_50   ; 4.475 ; 4.475 ; Rise       ; CLOCK_50        ;
+; VGA_R[*]       ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_R[0]      ; CLOCK_50   ; 4.382 ; 4.382 ; Rise       ; CLOCK_50        ;
+;  VGA_R[1]      ; CLOCK_50   ; 4.366 ; 4.366 ; Rise       ; CLOCK_50        ;
+;  VGA_R[2]      ; CLOCK_50   ; 4.367 ; 4.367 ; Rise       ; CLOCK_50        ;
+;  VGA_R[3]      ; CLOCK_50   ; 4.395 ; 4.395 ; Rise       ; CLOCK_50        ;
+;  VGA_R[4]      ; CLOCK_50   ; 4.385 ; 4.385 ; Rise       ; CLOCK_50        ;
+;  VGA_R[5]      ; CLOCK_50   ; 4.280 ; 4.280 ; Rise       ; CLOCK_50        ;
+;  VGA_R[6]      ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_R[7]      ; CLOCK_50   ; 4.481 ; 4.481 ; Rise       ; CLOCK_50        ;
+;  VGA_R[8]      ; CLOCK_50   ; 4.468 ; 4.468 ; Rise       ; CLOCK_50        ;
+;  VGA_R[9]      ; CLOCK_50   ; 4.348 ; 4.348 ; Rise       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; clk_25mhz  ; 6.357 ; 6.357 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[0]  ; clk_25mhz  ; 5.622 ; 5.622 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[1]  ; clk_25mhz  ; 5.629 ; 5.629 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[2]  ; clk_25mhz  ; 5.754 ; 5.754 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[3]  ; clk_25mhz  ; 5.754 ; 5.754 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[4]  ; clk_25mhz  ; 5.748 ; 5.748 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[5]  ; clk_25mhz  ; 5.743 ; 5.743 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[6]  ; clk_25mhz  ; 5.839 ; 5.839 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[7]  ; clk_25mhz  ; 5.863 ; 5.863 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[8]  ; clk_25mhz  ; 5.810 ; 5.810 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[9]  ; clk_25mhz  ; 6.011 ; 6.011 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[10] ; clk_25mhz  ; 6.049 ; 6.049 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[11] ; clk_25mhz  ; 6.202 ; 6.202 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[12] ; clk_25mhz  ; 6.116 ; 6.116 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[13] ; clk_25mhz  ; 6.297 ; 6.297 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[14] ; clk_25mhz  ; 6.231 ; 6.231 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[15] ; clk_25mhz  ; 6.216 ; 6.216 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[16] ; clk_25mhz  ; 6.330 ; 6.330 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[17] ; clk_25mhz  ; 6.357 ; 6.357 ; Rise       ; clk_25mhz       ;
+; VGA_B[*]       ; clk_25mhz  ; 7.419 ; 7.419 ; Rise       ; clk_25mhz       ;
+;  VGA_B[0]      ; clk_25mhz  ; 7.372 ; 7.372 ; Rise       ; clk_25mhz       ;
+;  VGA_B[1]      ; clk_25mhz  ; 7.321 ; 7.321 ; Rise       ; clk_25mhz       ;
+;  VGA_B[2]      ; clk_25mhz  ; 7.419 ; 7.419 ; Rise       ; clk_25mhz       ;
+;  VGA_B[3]      ; clk_25mhz  ; 7.296 ; 7.296 ; Rise       ; clk_25mhz       ;
+;  VGA_B[4]      ; clk_25mhz  ; 7.316 ; 7.316 ; Rise       ; clk_25mhz       ;
+;  VGA_B[5]      ; clk_25mhz  ; 7.296 ; 7.296 ; Rise       ; clk_25mhz       ;
+;  VGA_B[6]      ; clk_25mhz  ; 7.210 ; 7.210 ; Rise       ; clk_25mhz       ;
+;  VGA_B[7]      ; clk_25mhz  ; 7.246 ; 7.246 ; Rise       ; clk_25mhz       ;
+;  VGA_B[8]      ; clk_25mhz  ; 7.321 ; 7.321 ; Rise       ; clk_25mhz       ;
+;  VGA_B[9]      ; clk_25mhz  ; 7.280 ; 7.280 ; Rise       ; clk_25mhz       ;
+; VGA_BLANK      ; clk_25mhz  ; 5.771 ; 5.771 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ; 3.668 ;       ; Rise       ; clk_25mhz       ;
+; VGA_G[*]       ; clk_25mhz  ; 7.264 ; 7.264 ; Rise       ; clk_25mhz       ;
+;  VGA_G[0]      ; clk_25mhz  ; 7.260 ; 7.260 ; Rise       ; clk_25mhz       ;
+;  VGA_G[1]      ; clk_25mhz  ; 7.074 ; 7.074 ; Rise       ; clk_25mhz       ;
+;  VGA_G[2]      ; clk_25mhz  ; 7.264 ; 7.264 ; Rise       ; clk_25mhz       ;
+;  VGA_G[3]      ; clk_25mhz  ; 7.250 ; 7.250 ; Rise       ; clk_25mhz       ;
+;  VGA_G[4]      ; clk_25mhz  ; 7.068 ; 7.068 ; Rise       ; clk_25mhz       ;
+;  VGA_G[5]      ; clk_25mhz  ; 7.032 ; 7.032 ; Rise       ; clk_25mhz       ;
+;  VGA_G[6]      ; clk_25mhz  ; 7.127 ; 7.127 ; Rise       ; clk_25mhz       ;
+;  VGA_G[7]      ; clk_25mhz  ; 6.849 ; 6.849 ; Rise       ; clk_25mhz       ;
+;  VGA_G[8]      ; clk_25mhz  ; 7.167 ; 7.167 ; Rise       ; clk_25mhz       ;
+;  VGA_G[9]      ; clk_25mhz  ; 7.157 ; 7.157 ; Rise       ; clk_25mhz       ;
+; VGA_HS         ; clk_25mhz  ; 5.346 ; 5.346 ; Rise       ; clk_25mhz       ;
+; VGA_R[*]       ; clk_25mhz  ; 7.250 ; 7.250 ; Rise       ; clk_25mhz       ;
+;  VGA_R[0]      ; clk_25mhz  ; 7.051 ; 7.051 ; Rise       ; clk_25mhz       ;
+;  VGA_R[1]      ; clk_25mhz  ; 7.048 ; 7.048 ; Rise       ; clk_25mhz       ;
+;  VGA_R[2]      ; clk_25mhz  ; 7.049 ; 7.049 ; Rise       ; clk_25mhz       ;
+;  VGA_R[3]      ; clk_25mhz  ; 7.064 ; 7.064 ; Rise       ; clk_25mhz       ;
+;  VGA_R[4]      ; clk_25mhz  ; 7.057 ; 7.057 ; Rise       ; clk_25mhz       ;
+;  VGA_R[5]      ; clk_25mhz  ; 6.949 ; 6.949 ; Rise       ; clk_25mhz       ;
+;  VGA_R[6]      ; clk_25mhz  ; 7.250 ; 7.250 ; Rise       ; clk_25mhz       ;
+;  VGA_R[7]      ; clk_25mhz  ; 7.163 ; 7.163 ; Rise       ; clk_25mhz       ;
+;  VGA_R[8]      ; clk_25mhz  ; 7.137 ; 7.137 ; Rise       ; clk_25mhz       ;
+;  VGA_R[9]      ; clk_25mhz  ; 7.020 ; 7.020 ; Rise       ; clk_25mhz       ;
+; VGA_VS         ; clk_25mhz  ; 5.719 ; 5.719 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ;       ; 3.668 ; Fall       ; clk_25mhz       ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; VGA_B[*]       ; CLOCK_50   ; 4.529 ; 4.529 ; Rise       ; CLOCK_50        ;
+;  VGA_B[0]      ; CLOCK_50   ; 4.694 ; 4.694 ; Rise       ; CLOCK_50        ;
+;  VGA_B[1]      ; CLOCK_50   ; 4.640 ; 4.640 ; Rise       ; CLOCK_50        ;
+;  VGA_B[2]      ; CLOCK_50   ; 4.755 ; 4.755 ; Rise       ; CLOCK_50        ;
+;  VGA_B[3]      ; CLOCK_50   ; 4.621 ; 4.621 ; Rise       ; CLOCK_50        ;
+;  VGA_B[4]      ; CLOCK_50   ; 4.644 ; 4.644 ; Rise       ; CLOCK_50        ;
+;  VGA_B[5]      ; CLOCK_50   ; 4.618 ; 4.618 ; Rise       ; CLOCK_50        ;
+;  VGA_B[6]      ; CLOCK_50   ; 4.529 ; 4.529 ; Rise       ; CLOCK_50        ;
+;  VGA_B[7]      ; CLOCK_50   ; 4.582 ; 4.582 ; Rise       ; CLOCK_50        ;
+;  VGA_B[8]      ; CLOCK_50   ; 4.646 ; 4.646 ; Rise       ; CLOCK_50        ;
+;  VGA_B[9]      ; CLOCK_50   ; 4.608 ; 4.608 ; Rise       ; CLOCK_50        ;
+; VGA_G[*]       ; CLOCK_50   ; 4.169 ; 4.169 ; Rise       ; CLOCK_50        ;
+;  VGA_G[0]      ; CLOCK_50   ; 4.580 ; 4.580 ; Rise       ; CLOCK_50        ;
+;  VGA_G[1]      ; CLOCK_50   ; 4.394 ; 4.394 ; Rise       ; CLOCK_50        ;
+;  VGA_G[2]      ; CLOCK_50   ; 4.583 ; 4.583 ; Rise       ; CLOCK_50        ;
+;  VGA_G[3]      ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_G[4]      ; CLOCK_50   ; 4.393 ; 4.393 ; Rise       ; CLOCK_50        ;
+;  VGA_G[5]      ; CLOCK_50   ; 4.368 ; 4.368 ; Rise       ; CLOCK_50        ;
+;  VGA_G[6]      ; CLOCK_50   ; 4.447 ; 4.447 ; Rise       ; CLOCK_50        ;
+;  VGA_G[7]      ; CLOCK_50   ; 4.169 ; 4.169 ; Rise       ; CLOCK_50        ;
+;  VGA_G[8]      ; CLOCK_50   ; 4.486 ; 4.486 ; Rise       ; CLOCK_50        ;
+;  VGA_G[9]      ; CLOCK_50   ; 4.475 ; 4.475 ; Rise       ; CLOCK_50        ;
+; VGA_R[*]       ; CLOCK_50   ; 4.280 ; 4.280 ; Rise       ; CLOCK_50        ;
+;  VGA_R[0]      ; CLOCK_50   ; 4.382 ; 4.382 ; Rise       ; CLOCK_50        ;
+;  VGA_R[1]      ; CLOCK_50   ; 4.366 ; 4.366 ; Rise       ; CLOCK_50        ;
+;  VGA_R[2]      ; CLOCK_50   ; 4.367 ; 4.367 ; Rise       ; CLOCK_50        ;
+;  VGA_R[3]      ; CLOCK_50   ; 4.395 ; 4.395 ; Rise       ; CLOCK_50        ;
+;  VGA_R[4]      ; CLOCK_50   ; 4.385 ; 4.385 ; Rise       ; CLOCK_50        ;
+;  VGA_R[5]      ; CLOCK_50   ; 4.280 ; 4.280 ; Rise       ; CLOCK_50        ;
+;  VGA_R[6]      ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_R[7]      ; CLOCK_50   ; 4.481 ; 4.481 ; Rise       ; CLOCK_50        ;
+;  VGA_R[8]      ; CLOCK_50   ; 4.468 ; 4.468 ; Rise       ; CLOCK_50        ;
+;  VGA_R[9]      ; CLOCK_50   ; 4.348 ; 4.348 ; Rise       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; clk_25mhz  ; 4.021 ; 4.021 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[0]  ; clk_25mhz  ; 4.108 ; 4.108 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[1]  ; clk_25mhz  ; 4.100 ; 4.100 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[2]  ; clk_25mhz  ; 4.073 ; 4.073 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[3]  ; clk_25mhz  ; 4.086 ; 4.086 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[4]  ; clk_25mhz  ; 4.030 ; 4.030 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[5]  ; clk_25mhz  ; 4.021 ; 4.021 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[6]  ; clk_25mhz  ; 4.503 ; 4.503 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[7]  ; clk_25mhz  ; 4.527 ; 4.527 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[8]  ; clk_25mhz  ; 4.467 ; 4.467 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[9]  ; clk_25mhz  ; 4.490 ; 4.490 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[10] ; clk_25mhz  ; 4.399 ; 4.399 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[11] ; clk_25mhz  ; 4.499 ; 4.499 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[12] ; clk_25mhz  ; 4.382 ; 4.382 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[13] ; clk_25mhz  ; 4.430 ; 4.430 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[14] ; clk_25mhz  ; 4.254 ; 4.254 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[15] ; clk_25mhz  ; 4.353 ; 4.353 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[16] ; clk_25mhz  ; 4.287 ; 4.287 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[17] ; clk_25mhz  ; 4.276 ; 4.276 ; Rise       ; clk_25mhz       ;
+; VGA_B[*]       ; clk_25mhz  ; 5.578 ; 5.578 ; Rise       ; clk_25mhz       ;
+;  VGA_B[0]      ; clk_25mhz  ; 5.738 ; 5.738 ; Rise       ; clk_25mhz       ;
+;  VGA_B[1]      ; clk_25mhz  ; 5.689 ; 5.689 ; Rise       ; clk_25mhz       ;
+;  VGA_B[2]      ; clk_25mhz  ; 5.784 ; 5.784 ; Rise       ; clk_25mhz       ;
+;  VGA_B[3]      ; clk_25mhz  ; 5.662 ; 5.662 ; Rise       ; clk_25mhz       ;
+;  VGA_B[4]      ; clk_25mhz  ; 5.682 ; 5.682 ; Rise       ; clk_25mhz       ;
+;  VGA_B[5]      ; clk_25mhz  ; 5.662 ; 5.662 ; Rise       ; clk_25mhz       ;
+;  VGA_B[6]      ; clk_25mhz  ; 5.578 ; 5.578 ; Rise       ; clk_25mhz       ;
+;  VGA_B[7]      ; clk_25mhz  ; 5.611 ; 5.611 ; Rise       ; clk_25mhz       ;
+;  VGA_B[8]      ; clk_25mhz  ; 5.687 ; 5.687 ; Rise       ; clk_25mhz       ;
+;  VGA_B[9]      ; clk_25mhz  ; 5.646 ; 5.646 ; Rise       ; clk_25mhz       ;
+; VGA_BLANK      ; clk_25mhz  ; 4.958 ; 4.958 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ; 3.668 ;       ; Rise       ; clk_25mhz       ;
+; VGA_G[*]       ; clk_25mhz  ; 5.216 ; 5.216 ; Rise       ; clk_25mhz       ;
+;  VGA_G[0]      ; clk_25mhz  ; 5.627 ; 5.627 ; Rise       ; clk_25mhz       ;
+;  VGA_G[1]      ; clk_25mhz  ; 5.441 ; 5.441 ; Rise       ; clk_25mhz       ;
+;  VGA_G[2]      ; clk_25mhz  ; 5.632 ; 5.632 ; Rise       ; clk_25mhz       ;
+;  VGA_G[3]      ; clk_25mhz  ; 5.618 ; 5.618 ; Rise       ; clk_25mhz       ;
+;  VGA_G[4]      ; clk_25mhz  ; 5.434 ; 5.434 ; Rise       ; clk_25mhz       ;
+;  VGA_G[5]      ; clk_25mhz  ; 5.397 ; 5.397 ; Rise       ; clk_25mhz       ;
+;  VGA_G[6]      ; clk_25mhz  ; 5.494 ; 5.494 ; Rise       ; clk_25mhz       ;
+;  VGA_G[7]      ; clk_25mhz  ; 5.216 ; 5.216 ; Rise       ; clk_25mhz       ;
+;  VGA_G[8]      ; clk_25mhz  ; 5.535 ; 5.535 ; Rise       ; clk_25mhz       ;
+;  VGA_G[9]      ; clk_25mhz  ; 5.525 ; 5.525 ; Rise       ; clk_25mhz       ;
+; VGA_HS         ; clk_25mhz  ; 4.958 ; 4.958 ; Rise       ; clk_25mhz       ;
+; VGA_R[*]       ; clk_25mhz  ; 5.314 ; 5.314 ; Rise       ; clk_25mhz       ;
+;  VGA_R[0]      ; clk_25mhz  ; 5.416 ; 5.416 ; Rise       ; clk_25mhz       ;
+;  VGA_R[1]      ; clk_25mhz  ; 5.416 ; 5.416 ; Rise       ; clk_25mhz       ;
+;  VGA_R[2]      ; clk_25mhz  ; 5.417 ; 5.417 ; Rise       ; clk_25mhz       ;
+;  VGA_R[3]      ; clk_25mhz  ; 5.429 ; 5.429 ; Rise       ; clk_25mhz       ;
+;  VGA_R[4]      ; clk_25mhz  ; 5.423 ; 5.423 ; Rise       ; clk_25mhz       ;
+;  VGA_R[5]      ; clk_25mhz  ; 5.314 ; 5.314 ; Rise       ; clk_25mhz       ;
+;  VGA_R[6]      ; clk_25mhz  ; 5.618 ; 5.618 ; Rise       ; clk_25mhz       ;
+;  VGA_R[7]      ; clk_25mhz  ; 5.531 ; 5.531 ; Rise       ; clk_25mhz       ;
+;  VGA_R[8]      ; clk_25mhz  ; 5.502 ; 5.502 ; Rise       ; clk_25mhz       ;
+;  VGA_R[9]      ; clk_25mhz  ; 5.386 ; 5.386 ; Rise       ; clk_25mhz       ;
+; VGA_VS         ; clk_25mhz  ; 5.053 ; 5.053 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ;       ; 3.668 ; Fall       ; clk_25mhz       ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                            ;
++------------------+---------+--------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack ; -1.759  ; -2.533 ; N/A      ; N/A     ; -1.380              ;
+;  CLOCK_50        ; 1.958   ; -2.533 ; N/A      ; N/A     ; -1.380              ;
+;  clk_25mhz       ; -1.759  ; 0.363  ; N/A      ; N/A     ; -0.500              ;
+; Design-wide TNS  ; -25.046 ; -2.533 ; 0.0      ; 0.0     ; -38.38              ;
+;  CLOCK_50        ; 0.000   ; -2.533 ; N/A      ; N/A     ; -18.380             ;
+;  clk_25mhz       ; -25.046 ; 0.000  ; N/A      ; N/A     ; -20.000             ;
++------------------+---------+--------+----------+---------+---------------------+
+
+
++--------------------------------------------------------------------------+
+; Setup Times                                                              ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; SRAM_DQ[*]   ; CLOCK_50   ; 4.495 ; 4.495 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[0]  ; CLOCK_50   ; 4.489 ; 4.489 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[1]  ; CLOCK_50   ; 4.359 ; 4.359 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[2]  ; CLOCK_50   ; 4.495 ; 4.495 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[3]  ; CLOCK_50   ; 4.453 ; 4.453 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[4]  ; CLOCK_50   ; 4.062 ; 4.062 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[5]  ; CLOCK_50   ; 4.316 ; 4.316 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[6]  ; CLOCK_50   ; 4.179 ; 4.179 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[7]  ; CLOCK_50   ; 4.244 ; 4.244 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[8]  ; CLOCK_50   ; 4.177 ; 4.177 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[9]  ; CLOCK_50   ; 4.192 ; 4.192 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[10] ; CLOCK_50   ; 3.862 ; 3.862 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[11] ; CLOCK_50   ; 4.130 ; 4.130 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[12] ; CLOCK_50   ; 4.353 ; 4.353 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[13] ; CLOCK_50   ; 4.204 ; 4.204 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[14] ; CLOCK_50   ; 4.202 ; 4.202 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[15] ; CLOCK_50   ; 4.166 ; 4.166 ; Rise       ; CLOCK_50        ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Hold Times                                                                 ;
++--------------+------------+--------+--------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++--------------+------------+--------+--------+------------+-----------------+
+; SRAM_DQ[*]   ; CLOCK_50   ; -2.018 ; -2.018 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[0]  ; CLOCK_50   ; -2.327 ; -2.327 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[1]  ; CLOCK_50   ; -2.247 ; -2.247 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[2]  ; CLOCK_50   ; -2.329 ; -2.329 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[3]  ; CLOCK_50   ; -2.295 ; -2.295 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[4]  ; CLOCK_50   ; -2.088 ; -2.088 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[5]  ; CLOCK_50   ; -2.265 ; -2.265 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[6]  ; CLOCK_50   ; -2.158 ; -2.158 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[7]  ; CLOCK_50   ; -2.210 ; -2.210 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[8]  ; CLOCK_50   ; -2.170 ; -2.170 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[9]  ; CLOCK_50   ; -2.168 ; -2.168 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[10] ; CLOCK_50   ; -2.018 ; -2.018 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[11] ; CLOCK_50   ; -2.140 ; -2.140 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[12] ; CLOCK_50   ; -2.263 ; -2.263 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[13] ; CLOCK_50   ; -2.171 ; -2.171 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[14] ; CLOCK_50   ; -2.177 ; -2.177 ; Rise       ; CLOCK_50        ;
+;  SRAM_DQ[15] ; CLOCK_50   ; -2.165 ; -2.165 ; Rise       ; CLOCK_50        ;
++--------------+------------+--------+--------+------------+-----------------+
+
+
++------------------------------------------------------------------------------+
+; Clock to Output Times                                                        ;
++----------------+------------+--------+--------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++----------------+------------+--------+--------+------------+-----------------+
+; VGA_B[*]       ; CLOCK_50   ; 8.744  ; 8.744  ; Rise       ; CLOCK_50        ;
+;  VGA_B[0]      ; CLOCK_50   ; 8.561  ; 8.561  ; Rise       ; CLOCK_50        ;
+;  VGA_B[1]      ; CLOCK_50   ; 8.371  ; 8.371  ; Rise       ; CLOCK_50        ;
+;  VGA_B[2]      ; CLOCK_50   ; 8.744  ; 8.744  ; Rise       ; CLOCK_50        ;
+;  VGA_B[3]      ; CLOCK_50   ; 8.322  ; 8.322  ; Rise       ; CLOCK_50        ;
+;  VGA_B[4]      ; CLOCK_50   ; 8.387  ; 8.387  ; Rise       ; CLOCK_50        ;
+;  VGA_B[5]      ; CLOCK_50   ; 8.351  ; 8.351  ; Rise       ; CLOCK_50        ;
+;  VGA_B[6]      ; CLOCK_50   ; 8.122  ; 8.122  ; Rise       ; CLOCK_50        ;
+;  VGA_B[7]      ; CLOCK_50   ; 8.307  ; 8.307  ; Rise       ; CLOCK_50        ;
+;  VGA_B[8]      ; CLOCK_50   ; 8.346  ; 8.346  ; Rise       ; CLOCK_50        ;
+;  VGA_B[9]      ; CLOCK_50   ; 8.353  ; 8.353  ; Rise       ; CLOCK_50        ;
+; VGA_G[*]       ; CLOCK_50   ; 8.315  ; 8.315  ; Rise       ; CLOCK_50        ;
+;  VGA_G[0]      ; CLOCK_50   ; 8.306  ; 8.306  ; Rise       ; CLOCK_50        ;
+;  VGA_G[1]      ; CLOCK_50   ; 7.846  ; 7.846  ; Rise       ; CLOCK_50        ;
+;  VGA_G[2]      ; CLOCK_50   ; 8.315  ; 8.315  ; Rise       ; CLOCK_50        ;
+;  VGA_G[3]      ; CLOCK_50   ; 8.294  ; 8.294  ; Rise       ; CLOCK_50        ;
+;  VGA_G[4]      ; CLOCK_50   ; 7.882  ; 7.882  ; Rise       ; CLOCK_50        ;
+;  VGA_G[5]      ; CLOCK_50   ; 7.834  ; 7.834  ; Rise       ; CLOCK_50        ;
+;  VGA_G[6]      ; CLOCK_50   ; 8.047  ; 8.047  ; Rise       ; CLOCK_50        ;
+;  VGA_G[7]      ; CLOCK_50   ; 7.365  ; 7.365  ; Rise       ; CLOCK_50        ;
+;  VGA_G[8]      ; CLOCK_50   ; 8.089  ; 8.089  ; Rise       ; CLOCK_50        ;
+;  VGA_G[9]      ; CLOCK_50   ; 8.073  ; 8.073  ; Rise       ; CLOCK_50        ;
+; VGA_R[*]       ; CLOCK_50   ; 8.310  ; 8.310  ; Rise       ; CLOCK_50        ;
+;  VGA_R[0]      ; CLOCK_50   ; 7.858  ; 7.858  ; Rise       ; CLOCK_50        ;
+;  VGA_R[1]      ; CLOCK_50   ; 7.844  ; 7.844  ; Rise       ; CLOCK_50        ;
+;  VGA_R[2]      ; CLOCK_50   ; 7.842  ; 7.842  ; Rise       ; CLOCK_50        ;
+;  VGA_R[3]      ; CLOCK_50   ; 7.888  ; 7.888  ; Rise       ; CLOCK_50        ;
+;  VGA_R[4]      ; CLOCK_50   ; 7.884  ; 7.884  ; Rise       ; CLOCK_50        ;
+;  VGA_R[5]      ; CLOCK_50   ; 7.649  ; 7.649  ; Rise       ; CLOCK_50        ;
+;  VGA_R[6]      ; CLOCK_50   ; 8.310  ; 8.310  ; Rise       ; CLOCK_50        ;
+;  VGA_R[7]      ; CLOCK_50   ; 8.086  ; 8.086  ; Rise       ; CLOCK_50        ;
+;  VGA_R[8]      ; CLOCK_50   ; 8.076  ; 8.076  ; Rise       ; CLOCK_50        ;
+;  VGA_R[9]      ; CLOCK_50   ; 7.823  ; 7.823  ; Rise       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; clk_25mhz  ; 12.727 ; 12.727 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[0]  ; clk_25mhz  ; 10.755 ; 10.755 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[1]  ; clk_25mhz  ; 10.763 ; 10.763 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[2]  ; clk_25mhz  ; 11.032 ; 11.032 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[3]  ; clk_25mhz  ; 11.033 ; 11.033 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[4]  ; clk_25mhz  ; 11.031 ; 11.031 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[5]  ; clk_25mhz  ; 11.022 ; 11.022 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[6]  ; clk_25mhz  ; 11.242 ; 11.242 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[7]  ; clk_25mhz  ; 11.326 ; 11.326 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[8]  ; clk_25mhz  ; 11.367 ; 11.367 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[9]  ; clk_25mhz  ; 11.880 ; 11.880 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[10] ; clk_25mhz  ; 12.057 ; 12.057 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[11] ; clk_25mhz  ; 12.391 ; 12.391 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[12] ; clk_25mhz  ; 12.186 ; 12.186 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[13] ; clk_25mhz  ; 12.504 ; 12.504 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[14] ; clk_25mhz  ; 12.469 ; 12.469 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[15] ; clk_25mhz  ; 12.390 ; 12.390 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[16] ; clk_25mhz  ; 12.637 ; 12.637 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[17] ; clk_25mhz  ; 12.727 ; 12.727 ; Rise       ; clk_25mhz       ;
+; VGA_B[*]       ; clk_25mhz  ; 14.535 ; 14.535 ; Rise       ; clk_25mhz       ;
+;  VGA_B[0]      ; clk_25mhz  ; 14.369 ; 14.369 ; Rise       ; clk_25mhz       ;
+;  VGA_B[1]      ; clk_25mhz  ; 14.184 ; 14.184 ; Rise       ; clk_25mhz       ;
+;  VGA_B[2]      ; clk_25mhz  ; 14.535 ; 14.535 ; Rise       ; clk_25mhz       ;
+;  VGA_B[3]      ; clk_25mhz  ; 14.127 ; 14.127 ; Rise       ; clk_25mhz       ;
+;  VGA_B[4]      ; clk_25mhz  ; 14.188 ; 14.188 ; Rise       ; clk_25mhz       ;
+;  VGA_B[5]      ; clk_25mhz  ; 14.159 ; 14.159 ; Rise       ; clk_25mhz       ;
+;  VGA_B[6]      ; clk_25mhz  ; 13.935 ; 13.935 ; Rise       ; clk_25mhz       ;
+;  VGA_B[7]      ; clk_25mhz  ; 14.098 ; 14.098 ; Rise       ; clk_25mhz       ;
+;  VGA_B[8]      ; clk_25mhz  ; 14.151 ; 14.151 ; Rise       ; clk_25mhz       ;
+;  VGA_B[9]      ; clk_25mhz  ; 14.154 ; 14.154 ; Rise       ; clk_25mhz       ;
+; VGA_BLANK      ; clk_25mhz  ; 10.997 ; 10.997 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ; 6.905  ;        ; Rise       ; clk_25mhz       ;
+; VGA_G[*]       ; clk_25mhz  ; 14.128 ; 14.128 ; Rise       ; clk_25mhz       ;
+;  VGA_G[0]      ; clk_25mhz  ; 14.117 ; 14.117 ; Rise       ; clk_25mhz       ;
+;  VGA_G[1]      ; clk_25mhz  ; 13.657 ; 13.657 ; Rise       ; clk_25mhz       ;
+;  VGA_G[2]      ; clk_25mhz  ; 14.128 ; 14.128 ; Rise       ; clk_25mhz       ;
+;  VGA_G[3]      ; clk_25mhz  ; 14.108 ; 14.108 ; Rise       ; clk_25mhz       ;
+;  VGA_G[4]      ; clk_25mhz  ; 13.687 ; 13.687 ; Rise       ; clk_25mhz       ;
+;  VGA_G[5]      ; clk_25mhz  ; 13.625 ; 13.625 ; Rise       ; clk_25mhz       ;
+;  VGA_G[6]      ; clk_25mhz  ; 13.858 ; 13.858 ; Rise       ; clk_25mhz       ;
+;  VGA_G[7]      ; clk_25mhz  ; 13.176 ; 13.176 ; Rise       ; clk_25mhz       ;
+;  VGA_G[8]      ; clk_25mhz  ; 13.902 ; 13.902 ; Rise       ; clk_25mhz       ;
+;  VGA_G[9]      ; clk_25mhz  ; 13.887 ; 13.887 ; Rise       ; clk_25mhz       ;
+; VGA_HS         ; clk_25mhz  ; 10.153 ; 10.153 ; Rise       ; clk_25mhz       ;
+; VGA_R[*]       ; clk_25mhz  ; 14.124 ; 14.124 ; Rise       ; clk_25mhz       ;
+;  VGA_R[0]      ; clk_25mhz  ; 13.655 ; 13.655 ; Rise       ; clk_25mhz       ;
+;  VGA_R[1]      ; clk_25mhz  ; 13.658 ; 13.658 ; Rise       ; clk_25mhz       ;
+;  VGA_R[2]      ; clk_25mhz  ; 13.656 ; 13.656 ; Rise       ; clk_25mhz       ;
+;  VGA_R[3]      ; clk_25mhz  ; 13.685 ; 13.685 ; Rise       ; clk_25mhz       ;
+;  VGA_R[4]      ; clk_25mhz  ; 13.685 ; 13.685 ; Rise       ; clk_25mhz       ;
+;  VGA_R[5]      ; clk_25mhz  ; 13.446 ; 13.446 ; Rise       ; clk_25mhz       ;
+;  VGA_R[6]      ; clk_25mhz  ; 14.124 ; 14.124 ; Rise       ; clk_25mhz       ;
+;  VGA_R[7]      ; clk_25mhz  ; 13.900 ; 13.900 ; Rise       ; clk_25mhz       ;
+;  VGA_R[8]      ; clk_25mhz  ; 13.873 ; 13.873 ; Rise       ; clk_25mhz       ;
+;  VGA_R[9]      ; clk_25mhz  ; 13.624 ; 13.624 ; Rise       ; clk_25mhz       ;
+; VGA_VS         ; clk_25mhz  ; 10.832 ; 10.832 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ;        ; 6.905  ; Fall       ; clk_25mhz       ;
++----------------+------------+--------+--------+------------+-----------------+
+
+
++----------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                              ;
++----------------+------------+-------+-------+------------+-----------------+
+; Data Port      ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++----------------+------------+-------+-------+------------+-----------------+
+; VGA_B[*]       ; CLOCK_50   ; 4.529 ; 4.529 ; Rise       ; CLOCK_50        ;
+;  VGA_B[0]      ; CLOCK_50   ; 4.694 ; 4.694 ; Rise       ; CLOCK_50        ;
+;  VGA_B[1]      ; CLOCK_50   ; 4.640 ; 4.640 ; Rise       ; CLOCK_50        ;
+;  VGA_B[2]      ; CLOCK_50   ; 4.755 ; 4.755 ; Rise       ; CLOCK_50        ;
+;  VGA_B[3]      ; CLOCK_50   ; 4.621 ; 4.621 ; Rise       ; CLOCK_50        ;
+;  VGA_B[4]      ; CLOCK_50   ; 4.644 ; 4.644 ; Rise       ; CLOCK_50        ;
+;  VGA_B[5]      ; CLOCK_50   ; 4.618 ; 4.618 ; Rise       ; CLOCK_50        ;
+;  VGA_B[6]      ; CLOCK_50   ; 4.529 ; 4.529 ; Rise       ; CLOCK_50        ;
+;  VGA_B[7]      ; CLOCK_50   ; 4.582 ; 4.582 ; Rise       ; CLOCK_50        ;
+;  VGA_B[8]      ; CLOCK_50   ; 4.646 ; 4.646 ; Rise       ; CLOCK_50        ;
+;  VGA_B[9]      ; CLOCK_50   ; 4.608 ; 4.608 ; Rise       ; CLOCK_50        ;
+; VGA_G[*]       ; CLOCK_50   ; 4.169 ; 4.169 ; Rise       ; CLOCK_50        ;
+;  VGA_G[0]      ; CLOCK_50   ; 4.580 ; 4.580 ; Rise       ; CLOCK_50        ;
+;  VGA_G[1]      ; CLOCK_50   ; 4.394 ; 4.394 ; Rise       ; CLOCK_50        ;
+;  VGA_G[2]      ; CLOCK_50   ; 4.583 ; 4.583 ; Rise       ; CLOCK_50        ;
+;  VGA_G[3]      ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_G[4]      ; CLOCK_50   ; 4.393 ; 4.393 ; Rise       ; CLOCK_50        ;
+;  VGA_G[5]      ; CLOCK_50   ; 4.368 ; 4.368 ; Rise       ; CLOCK_50        ;
+;  VGA_G[6]      ; CLOCK_50   ; 4.447 ; 4.447 ; Rise       ; CLOCK_50        ;
+;  VGA_G[7]      ; CLOCK_50   ; 4.169 ; 4.169 ; Rise       ; CLOCK_50        ;
+;  VGA_G[8]      ; CLOCK_50   ; 4.486 ; 4.486 ; Rise       ; CLOCK_50        ;
+;  VGA_G[9]      ; CLOCK_50   ; 4.475 ; 4.475 ; Rise       ; CLOCK_50        ;
+; VGA_R[*]       ; CLOCK_50   ; 4.280 ; 4.280 ; Rise       ; CLOCK_50        ;
+;  VGA_R[0]      ; CLOCK_50   ; 4.382 ; 4.382 ; Rise       ; CLOCK_50        ;
+;  VGA_R[1]      ; CLOCK_50   ; 4.366 ; 4.366 ; Rise       ; CLOCK_50        ;
+;  VGA_R[2]      ; CLOCK_50   ; 4.367 ; 4.367 ; Rise       ; CLOCK_50        ;
+;  VGA_R[3]      ; CLOCK_50   ; 4.395 ; 4.395 ; Rise       ; CLOCK_50        ;
+;  VGA_R[4]      ; CLOCK_50   ; 4.385 ; 4.385 ; Rise       ; CLOCK_50        ;
+;  VGA_R[5]      ; CLOCK_50   ; 4.280 ; 4.280 ; Rise       ; CLOCK_50        ;
+;  VGA_R[6]      ; CLOCK_50   ; 4.568 ; 4.568 ; Rise       ; CLOCK_50        ;
+;  VGA_R[7]      ; CLOCK_50   ; 4.481 ; 4.481 ; Rise       ; CLOCK_50        ;
+;  VGA_R[8]      ; CLOCK_50   ; 4.468 ; 4.468 ; Rise       ; CLOCK_50        ;
+;  VGA_R[9]      ; CLOCK_50   ; 4.348 ; 4.348 ; Rise       ; CLOCK_50        ;
+; SRAM_ADDR[*]   ; clk_25mhz  ; 4.021 ; 4.021 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[0]  ; clk_25mhz  ; 4.108 ; 4.108 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[1]  ; clk_25mhz  ; 4.100 ; 4.100 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[2]  ; clk_25mhz  ; 4.073 ; 4.073 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[3]  ; clk_25mhz  ; 4.086 ; 4.086 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[4]  ; clk_25mhz  ; 4.030 ; 4.030 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[5]  ; clk_25mhz  ; 4.021 ; 4.021 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[6]  ; clk_25mhz  ; 4.503 ; 4.503 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[7]  ; clk_25mhz  ; 4.527 ; 4.527 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[8]  ; clk_25mhz  ; 4.467 ; 4.467 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[9]  ; clk_25mhz  ; 4.490 ; 4.490 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[10] ; clk_25mhz  ; 4.399 ; 4.399 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[11] ; clk_25mhz  ; 4.499 ; 4.499 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[12] ; clk_25mhz  ; 4.382 ; 4.382 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[13] ; clk_25mhz  ; 4.430 ; 4.430 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[14] ; clk_25mhz  ; 4.254 ; 4.254 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[15] ; clk_25mhz  ; 4.353 ; 4.353 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[16] ; clk_25mhz  ; 4.287 ; 4.287 ; Rise       ; clk_25mhz       ;
+;  SRAM_ADDR[17] ; clk_25mhz  ; 4.276 ; 4.276 ; Rise       ; clk_25mhz       ;
+; VGA_B[*]       ; clk_25mhz  ; 5.578 ; 5.578 ; Rise       ; clk_25mhz       ;
+;  VGA_B[0]      ; clk_25mhz  ; 5.738 ; 5.738 ; Rise       ; clk_25mhz       ;
+;  VGA_B[1]      ; clk_25mhz  ; 5.689 ; 5.689 ; Rise       ; clk_25mhz       ;
+;  VGA_B[2]      ; clk_25mhz  ; 5.784 ; 5.784 ; Rise       ; clk_25mhz       ;
+;  VGA_B[3]      ; clk_25mhz  ; 5.662 ; 5.662 ; Rise       ; clk_25mhz       ;
+;  VGA_B[4]      ; clk_25mhz  ; 5.682 ; 5.682 ; Rise       ; clk_25mhz       ;
+;  VGA_B[5]      ; clk_25mhz  ; 5.662 ; 5.662 ; Rise       ; clk_25mhz       ;
+;  VGA_B[6]      ; clk_25mhz  ; 5.578 ; 5.578 ; Rise       ; clk_25mhz       ;
+;  VGA_B[7]      ; clk_25mhz  ; 5.611 ; 5.611 ; Rise       ; clk_25mhz       ;
+;  VGA_B[8]      ; clk_25mhz  ; 5.687 ; 5.687 ; Rise       ; clk_25mhz       ;
+;  VGA_B[9]      ; clk_25mhz  ; 5.646 ; 5.646 ; Rise       ; clk_25mhz       ;
+; VGA_BLANK      ; clk_25mhz  ; 4.958 ; 4.958 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ; 3.668 ;       ; Rise       ; clk_25mhz       ;
+; VGA_G[*]       ; clk_25mhz  ; 5.216 ; 5.216 ; Rise       ; clk_25mhz       ;
+;  VGA_G[0]      ; clk_25mhz  ; 5.627 ; 5.627 ; Rise       ; clk_25mhz       ;
+;  VGA_G[1]      ; clk_25mhz  ; 5.441 ; 5.441 ; Rise       ; clk_25mhz       ;
+;  VGA_G[2]      ; clk_25mhz  ; 5.632 ; 5.632 ; Rise       ; clk_25mhz       ;
+;  VGA_G[3]      ; clk_25mhz  ; 5.618 ; 5.618 ; Rise       ; clk_25mhz       ;
+;  VGA_G[4]      ; clk_25mhz  ; 5.434 ; 5.434 ; Rise       ; clk_25mhz       ;
+;  VGA_G[5]      ; clk_25mhz  ; 5.397 ; 5.397 ; Rise       ; clk_25mhz       ;
+;  VGA_G[6]      ; clk_25mhz  ; 5.494 ; 5.494 ; Rise       ; clk_25mhz       ;
+;  VGA_G[7]      ; clk_25mhz  ; 5.216 ; 5.216 ; Rise       ; clk_25mhz       ;
+;  VGA_G[8]      ; clk_25mhz  ; 5.535 ; 5.535 ; Rise       ; clk_25mhz       ;
+;  VGA_G[9]      ; clk_25mhz  ; 5.525 ; 5.525 ; Rise       ; clk_25mhz       ;
+; VGA_HS         ; clk_25mhz  ; 4.958 ; 4.958 ; Rise       ; clk_25mhz       ;
+; VGA_R[*]       ; clk_25mhz  ; 5.314 ; 5.314 ; Rise       ; clk_25mhz       ;
+;  VGA_R[0]      ; clk_25mhz  ; 5.416 ; 5.416 ; Rise       ; clk_25mhz       ;
+;  VGA_R[1]      ; clk_25mhz  ; 5.416 ; 5.416 ; Rise       ; clk_25mhz       ;
+;  VGA_R[2]      ; clk_25mhz  ; 5.417 ; 5.417 ; Rise       ; clk_25mhz       ;
+;  VGA_R[3]      ; clk_25mhz  ; 5.429 ; 5.429 ; Rise       ; clk_25mhz       ;
+;  VGA_R[4]      ; clk_25mhz  ; 5.423 ; 5.423 ; Rise       ; clk_25mhz       ;
+;  VGA_R[5]      ; clk_25mhz  ; 5.314 ; 5.314 ; Rise       ; clk_25mhz       ;
+;  VGA_R[6]      ; clk_25mhz  ; 5.618 ; 5.618 ; Rise       ; clk_25mhz       ;
+;  VGA_R[7]      ; clk_25mhz  ; 5.531 ; 5.531 ; Rise       ; clk_25mhz       ;
+;  VGA_R[8]      ; clk_25mhz  ; 5.502 ; 5.502 ; Rise       ; clk_25mhz       ;
+;  VGA_R[9]      ; clk_25mhz  ; 5.386 ; 5.386 ; Rise       ; clk_25mhz       ;
+; VGA_VS         ; clk_25mhz  ; 5.053 ; 5.053 ; Rise       ; clk_25mhz       ;
+; VGA_CLK        ; clk_25mhz  ;       ; 3.668 ; Fall       ; clk_25mhz       ;
++----------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------+
+; Setup Transfers                                                    ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_25mhz  ; clk_25mhz ; 280      ; 0        ; 0        ; 0        ;
+; clk_25mhz  ; CLOCK_50  ; 1        ; 1        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++--------------------------------------------------------------------+
+; Hold Transfers                                                     ;
++------------+-----------+----------+----------+----------+----------+
+; From Clock ; To Clock  ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-----------+----------+----------+----------+----------+
+; clk_25mhz  ; clk_25mhz ; 280      ; 0        ; 0        ; 0        ;
+; clk_25mhz  ; CLOCK_50  ; 1        ; 1        ; 0        ; 0        ;
++------------+-----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 53    ; 53   ;
+; Unconstrained Output Ports      ; 52    ; 52   ;
+; Unconstrained Output Port Paths ; 582   ; 582  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Mar 31 12:14:31 2026
+Info: Command: quartus_sta AES_128 -c AES_128
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'AES_128.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk_25mhz clk_25mhz
+    Info (332105): create_clock -period 1.000 -name CLOCK_50 CLOCK_50
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.759
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.759       -25.046 clk_25mhz 
+    Info (332119):     2.803         0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is -2.533
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.533        -2.533 CLOCK_50 
+    Info (332119):     0.810         0.000 clk_25mhz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -18.380 CLOCK_50 
+    Info (332119):    -0.500       -20.000 clk_25mhz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.286
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.286        -3.135 clk_25mhz 
+    Info (332119):     1.958         0.000 CLOCK_50 
+Info (332146): Worst-case hold slack is -1.578
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.578        -1.578 CLOCK_50 
+    Info (332119):     0.363         0.000 clk_25mhz 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -18.380 CLOCK_50 
+    Info (332119):    -0.500       -20.000 clk_25mhz 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4565 megabytes
+    Info: Processing ended: Tue Mar 31 12:14:32 2026
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

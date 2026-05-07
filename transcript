@@ -1,0 +1,959 @@
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_decryption_core
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:01:40 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# ** Error: (vsim-3033) Instantiation of 'sbox_8bit' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/IKE File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v Line: 24
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'sbox_8bit' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/IKE File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v Line: 25
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'sbox_8bit' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/IKE File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v Line: 26
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'sbox_8bit' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/IKE File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v Line: 27
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# Loading work.InvSubBytes
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 6
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 7
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 8
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 9
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 11
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 12
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 13
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 14
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 16
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 17
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 18
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 19
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 21
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 22
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 23
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# ** Error: (vsim-3033) Instantiation of 'Inv_isbox_8bits' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_decryption_core/dut/ISB File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v Line: 24
+#         Searched libraries:
+#             C:/Users/AD/Documents/STudy/HDL/DoAn/AES/work
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.InvMixColumns
+# Loading work.Mix_Single_Column
+# Error loading design
+# End time: 10:01:41 on Apr 14,2026, Elapsed time: 0:00:01
+# Errors: 20, Warnings: 2
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_decryption_core
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:04:27 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.InvMixColumns
+# Loading work.Mix_Single_Column
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 56a9313568f9f533a419893bd50d9902
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:10:08 on Apr 14,2026, Elapsed time: 0:05:41
+# Errors: 0, Warnings: 2
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:10:08 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.InvMixColumns
+# Loading work.Mix_Single_Column
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 56a9313568f9f533a419893bd50d9902
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:10:45 on Apr 14,2026, Elapsed time: 0:00:37
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:10:45 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.InvMixColumns
+# Loading work.Mix_Single_Column
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 56a9313568f9f533a419893bd50d9902
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:12:17 on Apr 14,2026, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:12:17 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.InvMixColumns
+# Loading work.Mix_Single_Column
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 56a9313568f9f533a419893bd50d9902
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:15:16 on Apr 14,2026, Elapsed time: 0:02:59
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:15:16 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.Inv_MixColumns
+# Loading work.Inv_Mix_Single_Column
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 546a7a5b7c6691917678ac9d32584cf0
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:15:55 on Apr 14,2026, Elapsed time: 0:00:39
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:15:55 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.Inv_MixColumns
+# Loading work.Inv_Mix_Single_Column
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 546a7a5b7c6691917678ac9d32584cf0
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:20:14 on Apr 14,2026, Elapsed time: 0:04:19
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:20:14 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.Inv_MixColumns
+# Loading work.Inv_Mix_Single_Column
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 546a7a5b7c6691917678ac9d32584cf0
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module InvMixColumns hoac InvSubBytes.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Load canceled
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:20:48 on Apr 14,2026, Elapsed time: 0:00:34
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:20:48 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.Inv_MixColumns
+# Loading work.Inv_Mix_Single_Column
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 3243f6a8885a308d313198a2e0370734
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: PASSED! Mach hoat dong chinh xac 100.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+vsim -gui work.tb_aes_encryption_core
+# End time: 10:25:31 on Apr 14,2026, Elapsed time: 0:04:43
+# Errors: 0, Warnings: 1
+# vsim -gui work.tb_aes_encryption_core 
+# Start time: 10:25:31 on Apr 14,2026
+# Loading work.tb_aes_encryption_core
+# Loading work.aes_encryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.SubBytes
+# Loading work.ShiftRows
+# Loading work.MixColumns
+# Loading work.Inv_Mix_Single_Column
+# Loading work.AddRoundKey
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'round_num'. The port definition is at: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_encryption_core/dut/RC File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v Line: 15
+run -all
+# =================================================
+#           TESTBENCH AES-128 ENCRYPTION CORE      
+# =================================================
+# Dang ma hoa...
+# Plaintext : 3243f6a8885a308d313198a2e0370734
+# Key       : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh sau 11 chu ky clock!
+# Ciphertext thuc te : 64c7a1d1484b729cd652b7350540af52
+# Ciphertext NIST    : 3925841d02dc09fbdc118597196a0b32
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module to hop.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v(79)
+#    Time: 290 ns  Iteration: 2  Instance: /tb_aes_encryption_core
+# Break in Module tb_aes_encryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v line 79
+run -all
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+# Break key hit
+# Simulation stop requested.
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_encryption_core
+# End time: 10:27:24 on Apr 14,2026, Elapsed time: 0:01:53
+# Errors: 0, Warnings: 5
+# vsim -gui work.tb_aes_encryption_core 
+# Start time: 10:27:24 on Apr 14,2026
+# Loading work.tb_aes_encryption_core
+# Loading work.aes_encryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.Inv_MixColumns
+# Loading work.Inv_Mix_Single_Column
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'plaintext'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_encryption_core/dut File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v Line: 16
+# Error loading design
+# End time: 10:27:25 on Apr 14,2026, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_encryption_core
+# vsim -gui work.tb_aes_encryption_core 
+# Start time: 10:28:05 on Apr 14,2026
+# Loading work.tb_aes_encryption_core
+# Loading work.aes_encryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.SubBytes
+# Loading work.ShiftRows
+# Loading work.MixColumns
+# Loading work.Inv_Mix_Single_Column
+# Loading work.AddRoundKey
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'round_num'. The port definition is at: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_encryption_core/dut/RC File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v Line: 15
+run -all
+# =================================================
+#           TESTBENCH AES-128 ENCRYPTION CORE      
+# =================================================
+# Dang ma hoa...
+# Plaintext : 3243f6a8885a308d313198a2e0370734
+# Key       : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh sau 11 chu ky clock!
+# Ciphertext thuc te : 64c7a1d1484b729cd652b7350540af52
+# Ciphertext NIST    : 3925841d02dc09fbdc118597196a0b32
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module to hop.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v(79)
+#    Time: 290 ns  Iteration: 2  Instance: /tb_aes_encryption_core
+# Break in Module tb_aes_encryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v line 79
+vsim -gui work.tb_aes_decryption_core
+# End time: 10:28:43 on Apr 14,2026, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb_aes_decryption_core 
+# Start time: 10:28:43 on Apr 14,2026
+# Loading work.tb_aes_decryption_core
+# Loading work.aes_decryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.InvKeyExpansion
+# Loading work.InvSubBytes
+# Loading work.Inv_sbox_8bit
+# Loading work.InvShiftRows
+# Loading work.AddRoundKey
+# Loading work.Inv_MixColumns
+# Loading work.Inv_Mix_Single_Column
+run -all
+# =================================================
+#           TESTBENCH AES-128 DECRYPTION CORE      
+# =================================================
+# Dang khoi tao khoa K10 va Giai ma...
+# Ciphertext input : 3925841d02dc09fbdc118597196a0b32
+# Key input        : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh giai ma!
+# Plaintext thuc te : 3243f6a8885a308d313198a2e0370734
+# Plaintext ky vong : 3243f6a8885a308d313198a2e0370734
+# 
+# => KET QUA: PASSED! Mach hoat dong chinh xac 100.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v(80)
+#    Time: 510 ns  Iteration: 2  Instance: /tb_aes_decryption_core
+# Break in Module tb_aes_decryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v line 80
+# Break key hit
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_encryption_core
+# End time: 10:30:25 on Apr 14,2026, Elapsed time: 0:01:42
+# Errors: 0, Warnings: 2
+# vsim -gui work.tb_aes_encryption_core 
+# Start time: 10:30:26 on Apr 14,2026
+# Loading work.tb_aes_encryption_core
+# Loading work.aes_encryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.SubBytes
+# Loading work.ShiftRows
+# Loading work.MixColumns
+# Loading work.Inv_Mix_Single_Column
+# Loading work.AddRoundKey
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'round_num'. The port definition is at: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_encryption_core/dut/RC File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v Line: 15
+run -all
+# =================================================
+#           TESTBENCH AES-128 ENCRYPTION CORE      
+# =================================================
+# Dang ma hoa...
+# Plaintext : 3243f6a8885a308d313198a2e0370734
+# Key       : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh sau 11 chu ky clock!
+# Ciphertext thuc te : 64c7a1d1484b729cd652b7350540af52
+# Ciphertext NIST    : 3925841d02dc09fbdc118597196a0b32
+# 
+# => KET QUA: FAILED! Ban can kiem tra lai cac module to hop.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v(79)
+#    Time: 290 ns  Iteration: 2  Instance: /tb_aes_encryption_core
+# Break in Module tb_aes_encryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v line 79
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_encryption_core
+# End time: 10:33:29 on Apr 14,2026, Elapsed time: 0:03:03
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb_aes_encryption_core 
+# Start time: 10:33:29 on Apr 14,2026
+# Loading work.tb_aes_encryption_core
+# Loading work.aes_encryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.SubBytes
+# Loading work.ShiftRows
+# Loading work.MixColumns
+# Loading work.Mix_Single_Column
+# Loading work.AddRoundKey
+# ** Warning: (vsim-3015) [PCDPC] - Port size (4) does not match connection size (32) for port 'round_num'. The port definition is at: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_aes_encryption_core/dut/RC File: C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v Line: 15
+run -all
+# =================================================
+#           TESTBENCH AES-128 ENCRYPTION CORE      
+# =================================================
+# Dang ma hoa...
+# Plaintext : 3243f6a8885a308d313198a2e0370734
+# Key       : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh sau 11 chu ky clock!
+# Ciphertext thuc te : 3925841d02dc09fbdc118597196a0b32
+# Ciphertext NIST    : 3925841d02dc09fbdc118597196a0b32
+# 
+# => KET QUA: PASSED! Mach chay dung chuan 100.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v(79)
+#    Time: 290 ns  Iteration: 2  Instance: /tb_aes_encryption_core
+# Break in Module tb_aes_encryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v line 79
+run -all
+# Break key hit
+# Break in Module tb_aes_encryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v line 29
+# Compile of MixColumns_tb.v was successful.
+# Compile of KeyExpansion_tb.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_encryption_core.v was successful.
+# Compile of KeyExpansion.v was successful.
+# Compile of Mix_Single_Column.v was successful.
+# Compile of MixColumns.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of Sbox_8bits.v was successful.
+# Compile of ShiftRows.v was successful.
+# Compile of SubBytes.v was successful.
+# Compile of aes_encryption_core_tb.v was successful.
+# Compile of tb_ShiftRows.v was successful.
+# Compile of AddRoundKey.v was successful.
+# Compile of aes_decryption_core.v was successful.
+# Compile of Inv_Mix_Single_Column.v was successful.
+# Compile of Inv_MixColumns.v was successful.
+# Compile of Inv_Sbox_8bits.v was successful.
+# Compile of InvKeyExpansion.v was successful.
+# Compile of InvShiftRows.v was successful.
+# Compile of InvSubBytes.v was successful.
+# Compile of rcon_gen.v was successful.
+# Compile of aes_decryption_core_tb.v was successful.
+# 23 compiles, 0 failed with no errors.
+vsim -gui work.tb_aes_encryption_core
+# End time: 10:37:52 on Apr 14,2026, Elapsed time: 0:04:23
+# Errors: 0, Warnings: 3
+# vsim -gui work.tb_aes_encryption_core 
+# Start time: 10:37:52 on Apr 14,2026
+# Loading work.tb_aes_encryption_core
+# Loading work.aes_encryption_core
+# Loading work.rcon_gen
+# Loading work.KeyExpansion
+# Loading work.Sbox_8bits
+# Loading work.SubBytes
+# Loading work.ShiftRows
+# Loading work.MixColumns
+# Loading work.Mix_Single_Column
+# Loading work.AddRoundKey
+run -all
+# =================================================
+#           TESTBENCH AES-128 ENCRYPTION CORE      
+# =================================================
+# Dang ma hoa...
+# Plaintext : 3243f6a8885a308d313198a2e0370734
+# Key       : 2b7e151628aed2a6abf7158809cf4f3c
+# 
+# Hoan thanh sau 11 chu ky clock!
+# Ciphertext thuc te : 3925841d02dc09fbdc118597196a0b32
+# Ciphertext NIST    : 3925841d02dc09fbdc118597196a0b32
+# 
+# => KET QUA: PASSED! Mach chay dung chuan 100.
+# =================================================
+# ** Note: $stop    : C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v(79)
+#    Time: 290 ns  Iteration: 2  Instance: /tb_aes_encryption_core
+# Break in Module tb_aes_encryption_core at C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v line 79
+# End time: 10:39:41 on Apr 14,2026, Elapsed time: 0:01:49
+# Errors: 0, Warnings: 1

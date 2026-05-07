@@ -1,0 +1,64 @@
+module aes_encryption_core(
+	input wire clk, reset_n, start_n,
+	input wire [127:0] plaintext, key,
+	output reg [127:0] ciphertext,
+	output reg done
+);
+
+reg [3:0] round;
+reg [127:0] current_state, current_key;
+
+wire [127:0] sub_out, shift_out, add_key_out, mix_out, key_expansion_out;
+wire [7:0] rcon_out;
+
+//Datapath
+rcon_gen RC(.round_num(round), .rcon(rcon_out));
+KeyExpansion KE(.prev_key(current_key), .rcon(rcon_out), .next_key(key_expansion_out));
+
+
+SubBytes SB(.state_in(current_state), .state_out(sub_out));
+ShiftRows SR(.state_in(sub_out), .state_out(shift_out));
+MixColumn(.state_in(shift_out), .state_out(mix_out);
+
+wire [127:0] Before_Add_Key = (round == 4'd10) ? mix_out : shift_out;
+
+AddRoundKey ARK(.state_in(Before_Add_Key), .round_key(current_key), .state_out(add_key_out);
+
+//Controller
+parameter IDLE = 1'b0, WORKING = 1'b1;
+reg state_fsm;
+
+always @(posedge clk and negedge reset_n) begin
+	if (!reset_n) begin
+		state_fsm <= IDLE;
+		round <= 4'd0;
+		done <= 1'b0;
+		ciphertext <= 128'd0;
+	end
+	else 
+end
+
+always @(posedge clk and negedge reset_n) begin
+	if (!reset_n) begin
+		state_fsm <= IDLE;
+		round <= 4'd0;
+		done <= 1'b0;
+		ciphertext <= 128'd0;
+	end
+	else begin
+		case(state_fsm) begin
+			IDLE: 
+				done <= 1'b0;
+				if (!start_n) begin 
+					state_fsm <= WORKING;
+					current_key <= key;
+					current_state <= plaintext;
+					round <= 4'd0;
+				end
+			WORKING:
+		end
+	end
+end
+
+
+

@@ -1,0 +1,9 @@
+module mix_single_column(
+		input wire [31:0] column_in,
+		output wire [31:0] column_out
+);
+
+	wire [7:0] byte0 = column_in[31:24];
+	wire [7:0] byte0 = column_in[31:24];
+	
+endmodule

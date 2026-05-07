@@ -1,0 +1,111 @@
+module top(
+    input  wire        CLOCK_50,
+    input  wire [3:0]  KEY,      // Nút nhấn (Reset, Start...)
+    input  wire [17:0] SW,       // Gạt switch chọn chế độ (Xem ảnh gốc hay ảnh mã hóa)
+    
+    // Giao tiếp SRAM (Nối ra pin thật của DE2)
+    output wire [17:0] SRAM_ADDR,
+    inout  wire [15:0] SRAM_DQ,
+    output wire        SRAM_CE_N, SRAM_OE_N, SRAM_WE_N, SRAM_UB_N, SRAM_LB_N,
+    
+    // Giao tiếp VGA
+    output wire        VGA_HS, VGA_VS, VGA_SYNC_N, VGA_BLANK_N, VGA_CLK,
+    output wire [9:0]  VGA_R, VGA_G, VGA_B
+);
+
+    // --- 1. TÍN HIỆU ĐIỀU KHIỂN NỘI BỘ ---
+    wire reset_n = KEY[0];
+    wire start_n = KEY[1];
+    wire clk_50m = CLOCK_50;
+    
+    // Tín hiệu cho AES
+    reg          aes_enc_start, aes_dec_start;
+    wire         aes_enc_done, aes_dec_done;
+    reg  [127:0] aes_data_in;
+    wire [127:0] aes_enc_out, aes_dec_out;
+    wire [127:0] secret_key = 128'h2b7e151628aed2a6abf7158809cf4f3c; // Khóa tĩnh
+
+    // --- 2. GỌI CÁC MODULE IP CORES ---
+    
+    aes_encryption_core ENCRYPTOR (
+        .clk(clk_50m), .reset_n(reset_n), .start_n(aes_enc_start),
+        .plaintext(aes_data_in), .key(secret_key),
+        .ciphertext(aes_enc_out), .done(aes_enc_done)
+    );
+
+    aes_decryption_core DECRYPTOR (
+        .clk(clk_50m), .reset_n(reset_n), .start_n(aes_dec_start),
+        .ciphertext(aes_data_in), .key(secret_key),
+        .plaintext(aes_dec_out), .done(aes_dec_done)
+    );
+
+    // Tạm thời gọi interface của SRAM (Bạn sẽ phải viết module này)
+    /*
+    sram_controller SRAM_CTRL (
+        .clk(clk_50m), .reset_n(reset_n),
+        .addr(...), .write_data(...), .read_data(...), .we(...),
+        // Chân vật lý
+        .SRAM_ADDR(SRAM_ADDR), .SRAM_DQ(SRAM_DQ) ...
+    );
+    */
+
+    // Tạm thời gọi interface của VGA (Bạn sẽ phải viết module này)
+    /*
+    vga_controller VGA_CTRL (
+        .clk_25mhz(vga_clk), .reset_n(reset_n),
+        .pixel_data(...),
+        // Chân vật lý
+        .VGA_HS(VGA_HS), .VGA_R(VGA_R) ...
+    );
+    */
+
+    // --- 3. MASTER FSM (NHẠC TRƯỞNG ĐIỀU PHỐI) ---
+    parameter IDLE = 0, LOAD_SRAM = 1, RUN_ENC = 2, SAVE_SRAM = 3, DONE_ALL = 4;
+    reg [2:0] master_state;
+    reg [10:0] block_counter; // Đếm từ 0 đến 1023 (1024 khối 128-bit)
+
+    always @(posedge clk_50m or negedge reset_n) begin
+        if (!reset_n) begin
+            master_state <= IDLE;
+            block_counter <= 0;
+            aes_enc_start <= 1'b1;
+        end else begin
+            case (master_state)
+                IDLE: begin
+                    if (!start_n) master_state <= LOAD_SRAM;
+                end
+                
+                LOAD_SRAM: begin
+                    // (Logic gọi SRAM Controller lấy 16 byte ghép thành 128-bit)
+                    // ... sau khi lấy xong:
+                    aes_data_in <= /* dữ liệu 128 bit từ SRAM */;
+                    aes_enc_start <= 1'b0; // Bóp cò AES
+                    master_state <= RUN_ENC;
+                end
+                
+                RUN_ENC: begin
+                    aes_enc_start <= 1'b1; // Nhả cò
+                    if (aes_enc_done) begin
+                        master_state <= SAVE_SRAM;
+                    end
+                end
+                
+                SAVE_SRAM: begin
+                    // (Logic lấy aes_enc_out băm nhỏ ra đẩy vào SRAM_Controller)
+                    // ... sau khi ghi xong:
+                    if (block_counter == 1023) begin
+                        master_state <= DONE_ALL; // Đã mã hóa xong cả ảnh
+                    end else begin
+                        block_counter <= block_counter + 1;
+                        master_state <= LOAD_SRAM; // Xoay vòng khối tiếp theo
+                    end
+                end
+                
+                DONE_ALL: begin
+                    // Kích hoạt VGA hiển thị
+                end
+            endcase
+        end
+    end
+
+endmodule

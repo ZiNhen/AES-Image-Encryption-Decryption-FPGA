@@ -1,0 +1,162 @@
+C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InvKeyExpansion
+
+Top level modules:
+	InvKeyExpansion
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rcon_gen
+
+Top level modules:
+	rcon_gen
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/ShiftRows.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/ShiftRows.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ShiftRows
+
+Top level modules:
+	ShiftRows
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/MixColumns_tb.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/MixColumns_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_mix_columns
+
+Top level modules:
+	tb_mix_columns
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/rcon_gen.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/rcon_gen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module rcon_gen
+
+Top level modules:
+	rcon_gen
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvShiftRows.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvShiftRows.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InvShiftRows
+
+Top level modules:
+	InvShiftRows
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InvSubBytes
+
+Top level modules:
+	InvSubBytes
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_decryption_core_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_aes_decryption_core
+
+Top level modules:
+	tb_aes_decryption_core
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Mix_Single_Column.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Mix_Single_Column.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mix_Single_Column
+
+Top level modules:
+	Mix_Single_Column
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Mix_Single_Column.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Mix_Single_Column.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Inv_Mix_Single_Column
+
+Top level modules:
+	Inv_Mix_Single_Column
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/KeyExpansion.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/KeyExpansion.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module KeyExpansion
+
+Top level modules:
+	KeyExpansion
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/aes_encryption_core_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_aes_encryption_core
+
+Top level modules:
+	tb_aes_encryption_core
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/MixColumns.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/MixColumns.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MixColumns
+
+Top level modules:
+	MixColumns
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/aes_decryption_core.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/aes_decryption_core.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module aes_decryption_core
+
+Top level modules:
+	aes_decryption_core
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/AddRoundKey.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/AddRoundKey.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AddRoundKey
+
+Top level modules:
+	AddRoundKey
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_MixColumns.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_MixColumns.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Inv_MixColumns
+
+Top level modules:
+	Inv_MixColumns
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/SubBytes.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/SubBytes.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SubBytes
+
+Top level modules:
+	SubBytes
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/KeyExpansion_tb.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/KeyExpansion_tb.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module KeyEpansion_tb
+
+Top level modules:
+	KeyEpansion_tb
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/AddRoundKey.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/AddRoundKey.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module AddRoundKey
+
+Top level modules:
+	AddRoundKey
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module aes_encryption_core
+
+Top level modules:
+	aes_encryption_core
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/tb_ShiftRows.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/tb_ShiftRows.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_sub_shift
+
+Top level modules:
+	tb_sub_shift
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Sbox_8bits.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Sbox_8bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Sbox_8bits
+
+Top level modules:
+	Sbox_8bits
+
+} {} {}} C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Sbox_8bits.v {1 {vlog -work work -stats=none C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Sbox_8bits.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Inv_sbox_8bit
+
+Top level modules:
+	Inv_sbox_8bit
+
+} {} {}}

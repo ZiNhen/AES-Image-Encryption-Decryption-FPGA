@@ -1,0 +1,63 @@
+// ??nh ngh?a thang ?o th?i gian: 1ns cho m?i b??c mô ph?ng, ?? chính xác 1ps
+`timescale 1ns / 1ps
+
+module tb_mix_columns();
+
+    // 1. Khai báo tín hi?u
+    reg  [127:0] tb_state_in;    // Input dùng reg
+    wire [127:0] tb_state_out;   // Output dùng wire
+
+    // 2. Kh?i t?o module c?n test (G?i là DUT - Device Under Test)
+    // Ánh x? tín hi?u c?a Testbench vào các c?ng c?a module mix_columns
+    MixColumns dut (
+        .state_in(tb_state_in),
+        .state_out(tb_state_out)
+    );
+
+    // 3. Kh?i t?o tín hi?u kích thích (Stimulus)
+    initial begin
+        // In ra tiêu ?? c?t trên c?a s? Console (Transcript)
+        $display("===============================================================");
+        $display("                 TESTBENCH KH?I MIX COLUMNS AES                ");
+        $display("===============================================================");
+        $display("Thoi gian | State Input                      | State Output");
+        $display("---------------------------------------------------------------");
+
+        // --- TEST CASE 1: Test vector chu?n t? tài li?u FIPS 197 c?a NIST ---
+        
+        // C?p giá tr? ??u vào (Hexadecimal)
+        tb_state_in = 128'hd4bf5d30_e0b452ae_b84111f1_1e2798e5;
+        
+        // ??i 10 nanosecond ?? m?ch t? h?p tính toán xong
+        #10; 
+        
+        // In k?t qu? ra màn hình (Hàm $display ho?t ??ng gi?ng printf trong C)
+        // %0t: Th?i gian hi?n t?i, %h: In d?ng Hex
+        $display("%0t ns    | %h | %h", $time, tb_state_in, tb_state_out);
+        
+        // Ki?m tra t? ??ng (Self-checking)
+        if (tb_state_out == 128'h046681e5_e0cb199a_48f8d37a_2806264c) begin
+            $display("\n=> KET QUA: PASSED! Mach hoat dong dung chuan NIST.");
+        end else begin
+            $display("\n=> KET QUA: FAILED! Ket qua khong khop voi NIST vector.");
+            $display("Gia tri mong doi : 046681e5e0cb199a48f8d37a2806264c");
+            $display("Gia tri thuc te  : %h", tb_state_out);
+        end
+
+        // --- TEST CASE 2: Ma tr?n toàn s? 0 ---
+        tb_state_in = 128'h00000000_00000000_00000000_00000000;
+        #10;
+        $display("%0t ns    | %h | %h", $time, tb_state_in, tb_state_out);
+
+        // --- TEST CASE 3: Các giá tr? ng?u nhiên ?? ki?m tra góc (Edge cases) ---
+        tb_state_in = 128'hffffffff_ffffffff_ffffffff_ffffffff;
+        #10;
+        $display("%0t ns    | %h | %h", $time, tb_state_in, tb_state_out);
+
+        $display("===============================================================");
+        
+        // K?t thúc mô ph?ng
+        $stop; 
+    end
+
+endmodule

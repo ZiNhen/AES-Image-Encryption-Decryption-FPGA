@@ -1,0 +1,122 @@
+module aes_image_system (
+    input  wire        CLOCK_50,    // 50MHz
+    input  wire        reset_n,     // Reset bất đồng bộ
+    input  wire        btn_enc,     // Nút mã hóa
+    input  wire        btn_dec,     // Nút giải mã
+    
+    // SRAM Interface
+    output wire [17:0] SRAM_ADDR,
+    inout  wire [15:0] SRAM_DQ,
+    output wire        SRAM_WE_N, SRAM_OE_N, SRAM_UB_N, SRAM_LB_N, SRAM_CE_N,
+    
+    // VGA Interface
+    output wire        VGA_HS, VGA_VS,
+    output wire [9:0]  VGA_R, VGA_G, VGA_B,
+    output wire        VGA_CLK, VGA_BLANK_N, VGA_SYNC_N
+);
+
+    // --- 1. ĐIỀU KHIỂN XUNG NHỊP & RESET ---
+    reg clk_25;
+    always @(posedge CLOCK_50) clk_25 <= ~clk_25; // Tạo 25MHz cho VGA
+    assign VGA_CLK = clk_25;
+    assign VGA_SYNC_N = 1'b0;
+
+    // --- 2. KHAI BÁO CÁC CORE ---
+    wire [9:0] vga_x, vga_y;
+    wire vga_on;
+    vga_controller vga_unit (
+        .clk_25mhz(clk_25), .reset(!reset_n),
+        .hsync(VGA_HS), .vsync(VGA_VS), .x_pos(vga_x), .y_pos(vga_y), .video_on(vga_on)
+    ); // [cite: 228-239]
+
+    reg [17:0] s_addr; reg [15:0] s_data_w; reg s_we, s_rd; wire [15:0] s_data_r;
+    sram_controller sram_unit (
+        .clk(CLOCK_50), .reset(!reset_n), .i_addr(s_addr), .i_data_write(s_data_w),
+        .i_we(s_we), .i_rd(s_rd), .o_data_read(s_data_r),
+        .SRAM_ADDR(SRAM_ADDR), .SRAM_DQ(SRAM_DQ), .SRAM_WE_N(SRAM_WE_N),
+        .SRAM_OE_N(SRAM_OE_N), .SRAM_UB_N(SRAM_UB_N), .SRAM_LB_N(SRAM_LB_N), .SRAM_CE_N(SRAM_CE_N)
+    ); // [cite: 195-203]
+
+    reg [127:0] aes_in; wire [127:0] enc_out, dec_out; reg enc_st, dec_st; wire enc_dn, dec_dn;
+    aes_encryption_core enc_core (.clk(CLOCK_50), .reset_n(reset_n), .start_n(enc_st), .plaintext(aes_in), .key(128'h2b7e151628aed2a6abf7158809cf4f3c), .ciphertext(enc_out), .done(enc_dn));
+    aes_decryption_core dec_core (.clk(CLOCK_50), .reset_n(reset_n), .start_n(dec_st), .ciphertext(aes_in), .key(128'h2b7e151628aed2a6abf7158809cf4f3c), .plaintext(dec_out), .done(dec_dn));
+
+    // --- 3. MASTER FSM THEO LƯU ĐỒ ---
+    parameter ST_START = 3'd0, ST_ENC = 3'd1, ST_WAIT_DEC = 3'd2, ST_DEC = 3'd3, ST_DONE = 3'd4;
+    reg [2:0] m_state;
+    reg [6:0] row_enc, row_dec; // Quản lý hiển thị dần dần
+    reg is_encrypted; // Cờ is_encrypted == 1 trong lưu đồ
+
+    // Logic xử lý khối 128-bit (8 pixels)
+    parameter P_IDLE = 3'd0, P_READ = 3'd1, P_AES = 3'd2, P_WRITE = 3'd3;
+    reg [2:0] p_state; reg [3:0] blk_idx; reg [2:0] pix_idx;
+
+    always @(posedge CLOCK_50 or negedge reset_n) begin
+        if (!reset_n) begin // Reset bất đồng bộ về IDLE 
+            m_state <= ST_START; p_state <= P_IDLE;
+            row_enc <= 0; row_dec <= 0; is_encrypted <= 0;
+            enc_st <= 1; dec_st <= 1; s_we <= 0; s_rd <= 0;
+        end else begin
+            case (m_state)
+                ST_START: if (!btn_enc) m_state <= ST_ENC; // Nhấn Encrypt
+                
+                ST_ENC: begin // Thực hiện mã hóa (Loop cho đến khi hết 128 dòng)
+                    case (p_state)
+                        P_IDLE: begin p_state <= P_READ; blk_idx <= 0; pix_idx <= 0; end
+                        P_READ: begin // Đọc 8 pixels ghép vào 128-bit
+                            s_rd <= 1; s_addr <= 18'h00000 + row_enc*128 + blk_idx*8 + pix_idx;
+                            if (pix_idx == 7) begin p_state <= P_AES; pix_idx <= 0; s_rd <= 0; enc_st <= 0; end
+                            else pix_idx <= pix_idx + 1;
+                            aes_in <= {aes_in[111:0], s_data_r};
+                        end
+                        P_AES: begin enc_st <= 1; if (enc_dn) p_state <= P_WRITE; end
+                        P_WRITE: begin // Ghi 8 pixels mã hóa
+                            s_we <= 1; s_addr <= 18'h10000 + row_enc*128 + blk_idx*8 + pix_idx;
+                            s_data_w <= enc_out[127-pix_idx*16 -: 16];
+                            if (pix_idx == 7) begin 
+                                s_we <= 0; pix_idx <= 0;
+                                if (blk_idx == 15) begin 
+                                    if (row_enc == 127) begin m_state <= ST_WAIT_DEC; is_encrypted <= 1; end
+                                    else begin row_enc <= row_enc + 1; p_state <= P_IDLE; end
+                                end else blk_idx <= blk_idx + 1;
+                            end else pix_idx <= pix_idx + 1;
+                        end
+                    endcase
+                end
+
+                ST_WAIT_DEC: if (!btn_dec && is_encrypted) m_state <= ST_DEC; // Nhấn Decrypt
+
+                ST_DEC: begin // Thực hiện giải mã tương tự
+                    // ... (Tương tự logic mã hóa nhưng dùng dec_core và vùng 18'h20000)
+                    if (row_dec == 127 && dec_dn) m_state <= ST_DONE;
+                end
+                
+                ST_DONE: ; // Đứng đợi Reset
+            endcase
+        end
+    end
+
+    // --- 4. LOGIC HIỂN THỊ (VGA MAPPING) ---
+    reg [17:0] v_addr;
+    always @(*) begin
+        v_addr = 18'd0;
+        if (vga_y >= 176 && vga_y < 304) begin
+            // Khung 1: Luôn hiện
+            if (vga_x >= 40 && vga_x < 168)      v_addr = 18'h00000 + (vga_y-176)*128 + (vga_x-40);
+            // Khung 2: Hiện sau khi bắt đầu Encrypt
+            else if (vga_x >= 256 && vga_x < 384 && (vga_y-176) <= row_enc && m_state != ST_START) 
+                v_addr = 18'h10000 + (vga_y-176)*128 + (vga_x-256);
+            // Khung 3: Hiện sau khi bắt đầu Decrypt
+            else if (vga_x >= 472 && vga_x < 600 && (vga_y-176) <= row_dec && m_state == ST_DONE)
+                v_addr = 18'h20000 + (vga_y-176)*128 + (vga_x-472);
+        end
+    end
+
+    // Arbiter: Ưu tiên VGA đọc khi video_on [cite: 229, 237]
+    always @(*) begin
+        if (vga_on) begin s_addr = v_addr; s_rd = 1; end
+    end
+
+    assign {VGA_R, VGA_G, VGA_B} = vga_on ? {s_data_r[15:11], 5'b0, s_data_r[10:5], 4'b0, s_data_r[4:0], 5'b0} : 30'd0;
+
+endmodule
