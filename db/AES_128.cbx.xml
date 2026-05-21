@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="AES_128">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top|MasterController:comb_3|image_rom:ROM_UNIT|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_vnh1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

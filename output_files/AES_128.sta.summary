@@ -2,51 +2,51 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow Model Setup 'clk_25mhz'
-Slack : -1.759
-TNS   : -25.046
+Type  : Slow Model Setup 'MasterController:comb_3|clk_25'
+Slack : -1.635
+TNS   : -25.137
 
 Type  : Slow Model Setup 'CLOCK_50'
-Slack : 2.803
+Slack : 2.832
 TNS   : 0.000
 
 Type  : Slow Model Hold 'CLOCK_50'
-Slack : -2.533
-TNS   : -2.533
+Slack : -2.562
+TNS   : -2.562
 
-Type  : Slow Model Hold 'clk_25mhz'
-Slack : 0.810
+Type  : Slow Model Hold 'MasterController:comb_3|clk_25'
+Slack : 0.811
 TNS   : 0.000
 
 Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
 TNS   : -18.380
 
-Type  : Slow Model Minimum Pulse Width 'clk_25mhz'
+Type  : Slow Model Minimum Pulse Width 'MasterController:comb_3|clk_25'
 Slack : -0.500
 TNS   : -20.000
 
-Type  : Fast Model Setup 'clk_25mhz'
-Slack : -0.286
-TNS   : -3.135
+Type  : Fast Model Setup 'MasterController:comb_3|clk_25'
+Slack : -0.283
+TNS   : -3.105
 
 Type  : Fast Model Setup 'CLOCK_50'
-Slack : 1.958
+Slack : 1.982
 TNS   : 0.000
 
 Type  : Fast Model Hold 'CLOCK_50'
-Slack : -1.578
-TNS   : -1.578
+Slack : -1.602
+TNS   : -1.602
 
-Type  : Fast Model Hold 'clk_25mhz'
-Slack : 0.363
+Type  : Fast Model Hold 'MasterController:comb_3|clk_25'
+Slack : 0.364
 TNS   : 0.000
 
 Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
 Slack : -1.380
 TNS   : -18.380
 
-Type  : Fast Model Minimum Pulse Width 'clk_25mhz'
+Type  : Fast Model Minimum Pulse Width 'MasterController:comb_3|clk_25'
 Slack : -0.500
 TNS   : -20.000
 

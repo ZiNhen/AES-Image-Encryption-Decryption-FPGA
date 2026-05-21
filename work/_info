@@ -1,0 +1,508 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/AD/Documents/STudy/HDL/DoAn/AES
+vAddRoundKey
+Z1 !s110 1779330243
+!i10b 1
+!s100 zmHjE3dzj9XJ8Ti1NCbUh2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IGkGZQY7:3DUck@ENf6z<o0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1775027959
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/AddRoundKey.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/AddRoundKey.v
+!i122 142
+L0 1 9
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1779330243.000000
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/AddRoundKey.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/AddRoundKey.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@add@round@key
+vaes_decryption_core
+R1
+!i10b 1
+!s100 AjEl:o8bF@PdnaMI7Y_Gd0
+R2
+I@8j>oH^2`Ck7HSIRAj16k0
+R3
+R0
+w1778173498
+8C:\Users\AD\Documents\STudy\HDL\DoAn\AES\AES_Core\AES_DECRYPTION_CORE\aes_decryption_core.v
+FC:\Users\AD\Documents\STudy\HDL\DoAn\AES\AES_Core\AES_DECRYPTION_CORE\aes_decryption_core.v
+!i122 143
+L0 1 95
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\AD\Documents\STudy\HDL\DoAn\AES\AES_Core\AES_DECRYPTION_CORE\aes_decryption_core.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\AD\Documents\STudy\HDL\DoAn\AES\AES_Core\AES_DECRYPTION_CORE\aes_decryption_core.v|
+!i113 1
+R6
+R7
+vaes_encryption_core
+Z8 !s110 1779330242
+!i10b 1
+!s100 jKWD6gf;a2HU0legP;TQF1
+R2
+IWJ>6hk]mlElLoO>RcA]bC1
+R3
+R0
+w1776137838
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v
+!i122 132
+L0 1 88
+R4
+r1
+!s85 0
+31
+Z9 !s108 1779330241.000000
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/aes_encryption_core.v|
+!i113 1
+R6
+R7
+vInv_Mix_Single_Column
+R1
+!i10b 1
+!s100 ^<hD;U1TF7l<J7FPko07Y2
+R2
+I64WSY`h0Ez<=Se3cm[;o`0
+R3
+R0
+w1776136181
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Mix_Single_Column.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Mix_Single_Column.v
+!i122 144
+L0 1 56
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Mix_Single_Column.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Mix_Single_Column.v|
+!i113 1
+R6
+R7
+n@inv_@mix_@single_@column
+vInv_MixColumns
+Z10 !s110 1779330244
+!i10b 1
+!s100 RDMlK7Z?4zeWgKQOE9^P20
+R2
+I`EX?9eSLA4dG22@Y05C8F1
+R3
+R0
+w1776136483
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_MixColumns.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_MixColumns.v
+!i122 145
+Z11 L0 1 11
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_MixColumns.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_MixColumns.v|
+!i113 1
+R6
+R7
+n@inv_@mix@columns
+vInv_sbox_8bit
+R10
+!i10b 1
+!s100 2n`fS<R9SOF]GN=G[9K@C1
+R2
+ITi=^Ql;N:7NezfTS9mzJO3
+R3
+R0
+w1775488162
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Sbox_8bits.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Sbox_8bits.v
+!i122 146
+Z12 L0 1 266
+R4
+r1
+!s85 0
+31
+Z13 !s108 1779330244.000000
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Sbox_8bits.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/Inv_Sbox_8bits.v|
+!i113 1
+R6
+R7
+n@inv_sbox_8bit
+vInvKeyExpansion
+R10
+!i10b 1
+!s100 EY^M4^_LMOnZcXLIhD:]22
+R2
+IfjAP6VdBGZko_bAKPci]80
+R3
+R0
+w1776135831
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v
+!i122 147
+L0 1 38
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvKeyExpansion.v|
+!i113 1
+R6
+R7
+n@inv@key@expansion
+vInvShiftRows
+R10
+!i10b 1
+!s100 9;JESiz:3D81BJ8So:f;Y2
+R2
+IInZcX=LJ[ean]KiH>kJ^72
+R3
+R0
+w1776136799
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvShiftRows.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvShiftRows.v
+!i122 148
+L0 1 30
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvShiftRows.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvShiftRows.v|
+!i113 1
+R6
+R7
+n@inv@shift@rows
+vInvSubBytes
+R10
+!i10b 1
+!s100 iO=1;mk_j;<Y=;CgSB8=k1
+R2
+I=^iX1?aVER_c<0RmLLTOW3
+R3
+R0
+w1776135817
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v
+!i122 149
+Z14 L0 1 26
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/InvSubBytes.v|
+!i113 1
+R6
+R7
+n@inv@sub@bytes
+vKeyEpansion_tb
+Z15 !s110 1779330241
+!i10b 1
+!s100 JK_4n@Xc_`0OVAbG43m4]2
+R2
+IQeSGFJ?mW]GCE?SG`o9F_1
+R3
+R0
+w1775038508
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/KeyExpansion_tb.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/KeyExpansion_tb.v
+!i122 130
+L0 3 24
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/KeyExpansion_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/KeyExpansion_tb.v|
+!i113 1
+R6
+R7
+n@key@epansion_tb
+vKeyExpansion
+R8
+!i10b 1
+!s100 NCze;c7EM5Hm;6Vhmn6Zm3
+R2
+IVZ2<AQEAZiCaHK1W2in>40
+R3
+R0
+w1775038723
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/KeyExpansion.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/KeyExpansion.v
+!i122 133
+L0 1 33
+R4
+r1
+!s85 0
+31
+Z16 !s108 1779330242.000000
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/KeyExpansion.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/KeyExpansion.v|
+!i113 1
+R6
+R7
+n@key@expansion
+vMix_Single_Column
+R8
+!i10b 1
+!s100 J]6_NdlZX3dkMVJd][PXb3
+R2
+I1k4jVOVV[T8l0ZaTCX?Zk1
+R3
+R0
+w1775032453
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Mix_Single_Column.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Mix_Single_Column.v
+!i122 134
+L0 1 24
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Mix_Single_Column.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Mix_Single_Column.v|
+!i113 1
+R6
+R7
+n@mix_@single_@column
+vMixColumns
+R8
+!i10b 1
+!s100 NT@cbYHFz?38e>976QR^M3
+R2
+Il7gOdnNTLYgQRYS2b;Rm41
+R3
+R0
+w1776137581
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/MixColumns.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/MixColumns.v
+!i122 135
+R11
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/MixColumns.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/MixColumns.v|
+!i113 1
+R6
+R7
+n@mix@columns
+vrcon_gen
+R10
+!i10b 1
+!s100 <<9N;L2I5aTeW``;3IZAO1
+R2
+IL<NC`1kB0Dc86Fg8lYV?S2
+R3
+R0
+w1775036622
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v
+!i122 150
+L0 1 20
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_DECRYPTION_CORE/rcon_gen.v|
+!i113 1
+R6
+R7
+vSbox_8bits
+R8
+!i10b 1
+!s100 laYE5cU7oH9j14LXBj6ZW3
+R2
+IfgdgPMim1lGjmRc8l3fQo0
+R3
+R0
+w1775037544
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Sbox_8bits.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Sbox_8bits.v
+!i122 137
+R12
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Sbox_8bits.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/Sbox_8bits.v|
+!i113 1
+R6
+R7
+n@sbox_8bits
+vShiftRows
+R1
+!i10b 1
+!s100 d_g3PFST0RfIO;BcTARF83
+R2
+Il=f2AZ=T];W=bb[`5F`U_1
+R3
+R0
+w1775153233
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/ShiftRows.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/ShiftRows.v
+!i122 138
+L0 1 28
+R4
+r1
+!s85 0
+31
+R16
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/ShiftRows.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/ShiftRows.v|
+!i113 1
+R6
+R7
+n@shift@rows
+vSubBytes
+R1
+!i10b 1
+!s100 hGQOmBM=M6:MaQnTiISdF2
+R2
+I1]c6Y>YcL1i<7bD<n0B1?2
+R3
+R0
+w1775151745
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/SubBytes.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/SubBytes.v
+!i122 139
+R14
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/SubBytes.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/AES_Core/AES_ENCRYPTION_CORE/SubBytes.v|
+!i113 1
+R6
+R7
+n@sub@bytes
+vtb_aes_decryption_core
+!s110 1779330245
+!i10b 1
+!s100 >7=0I?N8hM41^oB?Cc08Z3
+R2
+I_ik3KZ`O<jc176bf:bCz^3
+R3
+R0
+w1779329958
+8C:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_decryption_core_tb.v
+FC:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_decryption_core_tb.v
+!i122 151
+L0 4 80
+R4
+r1
+!s85 0
+31
+R13
+!s107 C:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_decryption_core_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_decryption_core_tb.v|
+!i113 1
+R6
+R7
+vtb_aes_encryption_core
+R1
+!i10b 1
+!s100 H_mb1fdHjba=;Ehh85@S91
+R2
+IYenghdnT5l<c]QhYnCVJ01
+R3
+R0
+w1779330231
+8C:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_encryption_core_tb.v
+FC:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_encryption_core_tb.v
+!i122 140
+L0 4 79
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_encryption_core_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\AD\Documents\STudy\HDL\DoAn\AES\aes_encryption_core_tb.v|
+!i113 1
+R6
+R7
+vtb_mix_columns
+R15
+!i10b 1
+!s100 <co=cJGg0N2cEM2JOFdOF0
+R2
+I8oeBWUi;]X2?83^FbdE]O3
+R3
+R0
+w1775032183
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/MixColumns_tb.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/MixColumns_tb.v
+!i122 129
+L0 4 60
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/MixColumns_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/MixColumns_tb.v|
+!i113 1
+R6
+R7
+vtb_sub_shift
+R1
+!i10b 1
+!s100 QQ6imBgel2OhLQ0AQHD9e3
+R2
+In3XH<>G><NO8zNB5k@PCE0
+R3
+R0
+w1775153046
+8C:/Users/AD/Documents/STudy/HDL/DoAn/AES/tb_ShiftRows.v
+FC:/Users/AD/Documents/STudy/HDL/DoAn/AES/tb_ShiftRows.v
+!i122 141
+L0 3 63
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/AD/Documents/STudy/HDL/DoAn/AES/tb_ShiftRows.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/AD/Documents/STudy/HDL/DoAn/AES/tb_ShiftRows.v|
+!i113 1
+R6
+R7

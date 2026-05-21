@@ -3,7 +3,7 @@
 
 module tb_aes_encryption_core();
 
-    // 1. Khai báo tín hi?u Testbench
+    // 1. Khai bï¿½o tï¿½n hi?u Testbench
     reg          clk;
     reg          reset_n;
     reg          start_n;
@@ -12,7 +12,7 @@ module tb_aes_encryption_core();
     wire [127:0] ciphertext;
     wire         done;
 
-    // 2. Kh?i t?o (Instantiate) Module mã hóa AES
+    // 2. Kh?i t?o (Instantiate) Module mï¿½ hï¿½a AES
     aes_encryption_core dut (
         .clk(clk),
         .reset_n(reset_n),
@@ -31,14 +31,14 @@ module tb_aes_encryption_core();
 
     // 4. K?ch b?n test (Stimulus)
     initial begin
-        // In tiêu ?? console
+        // In tiï¿½u ?? console
         $display("=================================================");
         $display("          TESTBENCH AES-128 ENCRYPTION CORE      ");
         $display("=================================================");
 
-        // Kh?i t?o giá tr? ban ??u
+        // Kh?i t?o giï¿½ tr? ban ??u
         reset_n   = 0;
-        start_n   = 1; // Kéo lên 1 (không ho?t ??ng)
+        start_n   = 1; // Kï¿½o lï¿½n 1 (khï¿½ng ho?t ??ng)
         plaintext = 128'd0;
         key       = 128'd0;
 
@@ -47,21 +47,21 @@ module tb_aes_encryption_core();
         reset_n = 1;
         #20;
 
-        // --- B?T ??U MÃ HÓA ---
+        // --- B?T ??U Mï¿½ Hï¿½A ---
         // N?p vector chu?n c?a NIST
         plaintext = 128'h3243f6a8885a308d313198a2e0370734;
         key       = 128'h2b7e151628aed2a6abf7158809cf4f3c;
         
-        // Kích ho?t tín hi?u start_n (kéo xu?ng 0 trong 1 chu k? clock)
+        // Kï¿½ch ho?t tï¿½n hi?u start_n (kï¿½o xu?ng 0 trong 1 chu k? clock)
         start_n = 0;
         #20; 
-        start_n = 1; // Nh? start_n lên l?i
+        start_n = 1; // Nh? start_n lï¿½n l?i
 
         $display("Dang ma hoa...");
         $display("Plaintext : %h", plaintext);
         $display("Key       : %h", key);
 
-        // Ch? tín hi?u done b?t lên (Dùng @posedge ?? b?t chính xác s??n lên)
+        // Ch? tï¿½n hi?u done b?t lï¿½n (Dï¿½ng @posedge ?? b?t chï¿½nh xï¿½c s??n lï¿½n)
         @(posedge done);
 
         // --- KI?M TRA K?T QU? ---
@@ -76,7 +76,7 @@ module tb_aes_encryption_core();
         end
 
         $display("=================================================");
-        $stop; // D?ng mô ph?ng
+        $stop; // D?ng mï¿½ ph?ng
     end
 
 endmodule
